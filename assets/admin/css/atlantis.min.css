@@ -305,7 +305,7 @@ body {
   z-index: 1001;
   font-size: 17px;
   font-weight: 400;
-  padding-left: 25px;
+  padding-left: 45px;
   padding-right: 25px;
   z-index: 1001;
   display: flex;
@@ -427,7 +427,7 @@ body {
       position: absolute;
       top: 17px;
       right: 0px;
-      border-top-color: #777; }
+      border-top-color: #ffffff; }
   .sidebar .sidebar-wrapper, .sidebar[data-background-color="white"] .sidebar-wrapper {
     position: relative;
     max-height: calc(100vh - 75px);
@@ -508,7 +508,7 @@ body {
         font-size: 20px;
         font-weight: 200; }
       .sidebar .nav > .nav-item a i, .sidebar[data-background-color="white"] .nav > .nav-item a i {
-        color: #8d9498;
+        color: #ffffff;
         margin-right: 15px;
         width: 25px;
         text-align: center;
@@ -523,7 +523,7 @@ body {
         margin-bottom: 0px;
         margin-right: 5px;
         white-space: nowrap;
-        color: #8d9498; }
+        color: #ffffff; }
       .sidebar .nav > .nav-item a .caret, .sidebar[data-background-color="white"] .nav > .nav-item a .caret {
         margin-left: auto;
         margin-right: 10px;
@@ -708,7 +708,7 @@ body {
   .sidebar.sidebar-style-2 .nav.nav-danger > .nav-item.active > a[data-toggle=collapse][aria-expanded=true] i {
     color: #ffffff !important; }
 .sidebar.sidebar-style-2[data-background-color="dark"] .nav .nav-item a:hover p, .sidebar.sidebar-style-2[data-background-color="dark"] .nav .nav-item a:hover i, .sidebar.sidebar-style-2[data-background-color="dark"] .nav .nav-item a:focus p, .sidebar.sidebar-style-2[data-background-color="dark"] .nav .nav-item a:focus i, .sidebar.sidebar-style-2[data-background-color="dark"] .nav .nav-item a[data-toggle=collapse][aria-expanded=true] p, .sidebar.sidebar-style-2[data-background-color="dark"] .nav .nav-item a[data-toggle=collapse][aria-expanded=true] i, .sidebar.sidebar-style-2[data-background-color="dark2"] .nav .nav-item a:hover p, .sidebar.sidebar-style-2[data-background-color="dark2"] .nav .nav-item a:hover i, .sidebar.sidebar-style-2[data-background-color="dark2"] .nav .nav-item a:focus p, .sidebar.sidebar-style-2[data-background-color="dark2"] .nav .nav-item a:focus i, .sidebar.sidebar-style-2[data-background-color="dark2"] .nav .nav-item a[data-toggle=collapse][aria-expanded=true] p, .sidebar.sidebar-style-2[data-background-color="dark2"] .nav .nav-item a[data-toggle=collapse][aria-expanded=true] i {
-  color: #b9babf !important; }
+  color: #ffffff !important; }
 .sidebar.sidebar-style-2[data-background-color="dark"] .nav .nav-item.active a, .sidebar.sidebar-style-2[data-background-color="dark2"] .nav .nav-item.active a {
   color: #ffffff; }
   .sidebar.sidebar-style-2[data-background-color="dark"] .nav .nav-item.active a p, .sidebar.sidebar-style-2[data-background-color="dark"] .nav .nav-item.active a i, .sidebar.sidebar-style-2[data-background-color="dark"] .nav .nav-item.active a .caret, .sidebar.sidebar-style-2[data-background-color="dark"] .nav .nav-item.active a span, .sidebar.sidebar-style-2[data-background-color="dark2"] .nav .nav-item.active a p, .sidebar.sidebar-style-2[data-background-color="dark2"] .nav .nav-item.active a i, .sidebar.sidebar-style-2[data-background-color="dark2"] .nav .nav-item.active a .caret, .sidebar.sidebar-style-2[data-background-color="dark2"] .nav .nav-item.active a span {
@@ -1367,10 +1367,10 @@ body {
   background: #1a2035 !important; }
 
 .logo-header[data-background-color="dark2"] {
-  background: #1f283e !important; }
+  background: #0d9359  !important; }
 
 .navbar-header[data-background-color="dark"] {
-  background: #1a2035 !important; }
+  background: #007a45 !important; }
 
 .navbar-header[data-background-color="dark2"] {
   background: #1f283e !important; }
@@ -1472,17 +1472,17 @@ body {
     background-color: #dcdbdb; }
 
 .sidebar[data-background-color="dark2"] {
-  background: #1f283e !important; }
+  background: #007a45 !important; }
   .sidebar[data-background-color="dark2"] .user {
     border-color: rgba(181, 181, 181, 0.1) !important; }
     .sidebar[data-background-color="dark2"] .user .info a > span {
-      color: #b9babf; }
+      color: #ffffff; }
       .sidebar[data-background-color="dark2"] .user .info a > span .user-level {
-        color: #8d9498; }
+        color: #ffffff; }
   .sidebar[data-background-color="dark2"] .nav > .nav-item.active > a p {
     color: #b9babf !important; }
   .sidebar[data-background-color="dark2"] .nav > .nav-item a {
-    color: #b9babf !important; }
+    color: #ffffff !important; }
     .sidebar[data-background-color="dark2"] .nav > .nav-item a:hover p, .sidebar[data-background-color="dark2"] .nav > .nav-item a:focus p, .sidebar[data-background-color="dark2"] .nav > .nav-item a[data-toggle=collapse][aria-expanded=true] p {
       color: #b9babf !important; }
   .sidebar[data-background-color="dark2"].sidebar-style-2 .nav .nav-item.active > a, .sidebar[data-background-color="dark2"].sidebar-style-2 .nav .nav-item.active > a:hover, .sidebar[data-background-color="dark2"].sidebar-style-2 .nav .nav-item.active > a:focus, .sidebar[data-background-color="dark2"].sidebar-style-2 .nav .nav-item.active > a[data-toggle=collapse][aria-expanded=true] {
@@ -8801,7 +8801,7 @@ body {
   body[data-background-color="bg3"] {
     background: #f1f1f1; }
   body[data-background-color="dark"] {
-    background: #1a2035; }
+    background: #f3f4f7; }
     body[data-background-color="dark"] .main-header {
       box-shadow: 0px 0px 5px #121727; }
     body[data-background-color="dark"] .main-panel {
@@ -8851,9 +8851,9 @@ body {
       border-top: 1px solid #293247;
       background: #1f283e; }
     body[data-background-color="dark"] .form-control, body[data-background-color="dark"] .form-group-default, body[data-background-color="dark"] .select2-container--bootstrap .select2-selection {
-      background-color: #1a2035;
+      background-color: #3cc387;
       color: #fff;
-      border-color: #2f374b; }
+      border-color: #007a45; }
     body[data-background-color="dark"] .bootstrap-tagsinput {
       background: transparent; }
     body[data-background-color="dark"] .selectgroup-button {
