@@ -8805,11 +8805,11 @@ body {
     body[data-background-color="dark"] .main-header {
       box-shadow: 0px 0px 5px #121727; }
     body[data-background-color="dark"] .main-panel {
-      color: rgba(169, 175, 187, 0.82) !important; }
+      color: rgb(37 36 36 / 82%) !important; }
       body[data-background-color="dark"] .main-panel label {
-        color: #fff !important; }
+        color: #007a45  !important; }
     body[data-background-color="dark"] .card, body[data-background-color="dark"] .row-card-no-pd, body[data-background-color="dark"] .list-group-item, body[data-background-color="dark"] .timeline > li > .timeline-panel {
-      background: #202940; }
+      background: #ffffff; }
     body[data-background-color="dark"] .card-pricing2 {
       background: #202940 !important; }
     body[data-background-color="dark"] .row-card-no-pd [class*=col] .card:before {
@@ -8823,7 +8823,7 @@ body {
       border-left-color: #202940;
       border-right-color: #202940; }
     body[data-background-color="dark"] .page-title, body[data-background-color="dark"] .breadcrumbs li a {
-      color: rgba(169, 175, 187, 0.82); }
+      color: rgba(0, 122, 69, 1); }
     body[data-background-color="dark"] .page-category {
       color: #828282; }
     body[data-background-color="dark"] .card-title, body[data-background-color="dark"] .card-title a, body[data-background-color="dark"] .card-title a:hover, body[data-background-color="dark"] .card-title a:focus {
@@ -8960,3 +8960,12 @@ body {
   background: linear-gradient(-45deg, #E80A15, #F25961) !important; }
 
 /*# sourceMappingURL=atlantis.css.map */
+
+
+.card > .card-header{
+  background-color: #3cc387;
+}
+
+.card > .card-header > h3{
+  color: #ffffff;
+}
