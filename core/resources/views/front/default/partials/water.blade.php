@@ -1,4 +1,4 @@
-<div class="hero-area lazy" id="heroHome4" data-bg="{{asset('assets/front/img/'.$bs->hero_bg)}}" style="background-size: cover;">
+<div class="hero-area lazy" id="heroHome4" data-bg="{{asset('assets/front/img/'.$bs->hero_bg)}}" style="height:100vh;background-size: cover;">
    <div class="container">
       <div class="hero-txt">
          <div class="row">

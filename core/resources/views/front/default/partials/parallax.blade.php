@@ -1,4 +1,4 @@
-<div class="hero-area" data-parallax="scroll" data-speed="0.2" data-image-src="{{asset('assets/front/img/'.$bs->hero_bg)}}">
+<div class="hero-area" data-parallax="scroll" data-speed="0.2" data-image-src="{{asset('assets/front/img/'.$bs->hero_bg)}}" style="height:100vh;">
    <div class="container">
       <div class="hero-txt">
          <div class="row">

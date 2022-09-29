@@ -1,4 +1,4 @@
-<div class="hero-area lazy" id="particles-js" data-bg="{{asset('assets/front/img/'.$bs->hero_bg)}}" style="background-size: cover;">
+<div class="hero-area lazy" id="particles-js" data-bg="{{asset('assets/front/img/'.$bs->hero_bg)}}" style="height:100vh;background-size: cover;">
    <div class="container">
       <div class="hero-txt home-3">
          <div class="row">
