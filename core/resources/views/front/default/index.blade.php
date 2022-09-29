@@ -78,7 +78,7 @@
     <!--   hero area end    -->
 
 
-    <div class="intro-section">
+    <div class="intro-section" style="margin-top:0px;">
         <div class="container">
             @if (count($features) > 0)
                 <div class="hero-features">

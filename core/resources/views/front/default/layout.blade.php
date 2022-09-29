@@ -110,7 +110,7 @@
                        @endforeach
                      </ul>
 
-                     @if (!empty($currentLang) && count($langs) > 1)
+                     {{-- @if (!empty($currentLang) && count($langs) > 1)
                        <div class="language">
                           <a class="language-btn" href="#"><i class="flaticon-worldwide"></i> {{convertUtf8($currentLang->name)}}</a>
                           <ul class="language-dropdown">
@@ -119,7 +119,7 @@
                             @endforeach
                           </ul>
                        </div>
-                     @endif
+                     @endif --}}
 
                      @guest
                         @if ($bex->is_user_panel == 1)
@@ -355,7 +355,7 @@
         @endif
         <!--====== PRELOADER PART ENDS ======-->
 
-        @if ($bex->is_shop == 1 && $bex->catalog_mode == 0)
+        {{-- @if ($bex->is_shop == 1 && $bex->catalog_mode == 0)
             <div id="cartIconWrapper">
                 <a class="d-block" id="cartIcon" href="{{route('front.cart')}}">
                     <div class="cart-length">
@@ -369,7 +369,7 @@
                     </div>
                 </a>
             </div>
-        @endif
+        @endif --}}
 
       <!-- back to top area start -->
       <div class="back-to-top">
