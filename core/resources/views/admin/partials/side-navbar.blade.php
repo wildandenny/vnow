@@ -219,9 +219,9 @@ $data = \App\BasicExtra::first();
 @endif
 
 
-
-@if (empty($admin->role) || (!empty($permissions) && in_array('Package Management', $permissions)))
+{{-- package --}}
 {{-- Package Management --}}
+{{-- @if (empty($admin->role) || (!empty($permissions) && in_array('Package Management', $permissions)))
 <li class="nav-item
 @if(request()->path() == 'admin/packages') active
 @elseif(request()->routeIs('admin.package.edit')) active
@@ -238,6 +238,7 @@ $data = \App\BasicExtra::first();
 @elseif(request()->path() == 'admin/package/order/report') active
 @endif"
 >
+
 <a data-toggle="collapse" href="#packages">
     <i class="la flaticon-box-1"></i>
     <p>Package Management</p>
@@ -367,10 +368,12 @@ $data = \App\BasicExtra::first();
 </ul>
 </div>
 </li>
-@endif
+@endif --}}
+{{-- end of package --}}
 
-@if (empty($admin->role) || (!empty($permissions) && in_array('Quote Management', $permissions)))
-{{-- Quotes --}}
+
+{{-- Quotes Management --}}
+{{-- @if (empty($admin->role) || (!empty($permissions) && in_array('Quote Management', $permissions)))
 <li class="nav-item
 @if(request()->path() == 'admin/quote/form') active
 @elseif(request()->is('admin/quote/*/inputEdit')) active
@@ -440,10 +443,13 @@ $data = \App\BasicExtra::first();
 </ul>
 </div>
 </li>
-@endif
+@endif --}}
+{{-- End of quote management --}}
 
-@if (empty($admin->role) || (!empty($permissions) && in_array('Shop Management', $permissions)))
-{{-- Product --}}
+
+{{-- Product Management--}}
+{{-- @if (empty($admin->role) || (!empty($permissions) && in_array('Shop Management', $permissions)))
+
 <li class="nav-item
 @if(request()->path() == 'admin/category') active
 @elseif(request()->path() == 'admin/product') active
@@ -621,7 +627,8 @@ $data = \App\BasicExtra::first();
 </ul>
 </div>
 </li>
-@endif
+@endif --}}
+{{-- End Of product --}}
 
 @if (empty($admin->role) || (!empty($permissions) && in_array('Course Management', $permissions)))
 {{-- Courses --}}
@@ -754,7 +761,10 @@ id="course"
 </li>
 @endif
 
-@if (empty($admin->role) || (!empty($permissions) && in_array('Donation Management', $permissions)))
+
+
+{{-- DONATIONS --}}
+{{-- @if (empty($admin->role) || (!empty($permissions) && in_array('Donation Management', $permissions)))
 <li class="nav-item
 @if(request()->path() == 'admin/donations') active
 @elseif(request()->path() == 'admin/donations/payment-log') active
@@ -801,7 +811,8 @@ id="course"
 </ul>
 </div>
 </li>
-@endif
+@endif --}}
+{{-- END OF DONATIONS --}}
 
 {{-- Knowledgebase --}}
 @if (empty($admin->role) || (!empty($permissions) && in_array('Knowledgebase', $permissions)))
@@ -841,8 +852,8 @@ id="course"
 </li>
 @endif
 
-@if (empty($admin->role) || (!empty($permissions) && in_array('Tickets', $permissions)))
 {{-- Tickets --}}
+{{-- @if (empty($admin->role) || (!empty($permissions) && in_array('Tickets', $permissions)))
 <li class="nav-item
 @if(request()->path() == 'admin/all/tickets') active
 @elseif(request()->path() == 'admin/pending/tickets') active
@@ -893,7 +904,8 @@ id="course"
 </ul>
 </div>
 </li>
-@endif
+@endif --}}
+{{-- END OF Tickets --}}
 
 
 @if (empty($admin->role) || (!empty($permissions) && in_array('RSS Feeds', $permissions)))
