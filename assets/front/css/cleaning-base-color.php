@@ -383,7 +383,7 @@ color: <?php echo $color1; ?>;
 background: <?php echo $color1; ?>;
 }
 .bottom-header-area.sticky {
-border-bottom: 1px solid <?php echo $color1; ?>;
+  
 }
 .single-service-bg span {
 background: <?php echo $color1; ?>;

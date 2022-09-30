@@ -538,7 +538,7 @@ input[type=submit]:hover {
 }
 
 .bottom-header-area {
-    margin-top: 0
+    margin-right: -4px;
 }
 
 .bottom-header-area .main-menu {
@@ -649,7 +649,7 @@ li.submenus::after {
     position: absolute;
     top: 100%;
     left: 0;
-    background: #222;
+    background: #007a45;
     -webkit-transform: scale(1, 0);
     -ms-transform: scale(1, 0);
     transform: scale(1, 0);
@@ -2140,7 +2140,7 @@ a.main-btn.cart-btn.cart-link {
     max-height: 510px;
     overflow: hidden;
     overflow-y: scroll;
-    background: #222;
+    background: #007a45;
     padding: 10px 15px 10px;
     opacity: 0;
     visibility: hidden;
@@ -2334,4 +2334,12 @@ a.proceed-checkout-btn {
 }  
 .service-section {
     padding: 0 !important;
+}
+
+.container-fluid-header{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: -4px;
+    margin-left: auto;
 }

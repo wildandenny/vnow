@@ -119,7 +119,7 @@
         </section>  --}}
         
         <section class="bottom-header-area">
-            <div class="container-fluid">
+            <div class="container-fluid-head">
                 <div class="row position-relative" style="background-color: #fbb21d;">
                     <div class="col-lg-3 col-6" style="background-color:#ffffff;border-radius: 0 0 70px 0;height:90%;box-shadow: 3px 3px 3px 0px #888888;">
                         <div class="logo" style="text-align: center;padding:10px;">
