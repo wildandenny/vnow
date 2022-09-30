@@ -121,7 +121,7 @@
         <section class="bottom-header-area">
             <div class="container-fluid">
                 <div class="row position-relative" style="background-color: #fbb21d;">
-                    <div class="col-lg-3 col-6" style="background-color:#ffffff;border-radius: 0 0 70px 0;height:90%;">
+                    <div class="col-lg-3 col-6" style="background-color:#ffffff;border-radius: 0 0 70px 0;height:90%;box-shadow: 3px 3px 3px 0px #888888;">
                         <div class="logo" style="text-align: center;padding:10px;">
                             <a href="{{ route('front.index') }}">
                                 <img
@@ -133,12 +133,12 @@
                     <div class="col-lg-1" style="padding-bottom: 0px;">
                         <div class="row">
                             <div class="col-lg-12" style="background-color: #ffffff;padding: 0px;height:2.3rem;">
-                                <div style="height:100%;width:100%;background-color:#fbb21d;border-radius:70px 0 0 0;"><span></span></div>
+                                <div style="height:100%;width:100%;background-color:#fbb21d;border-radius:70px 0 0 0;box-shadow: inset 3px 3px 3px 0px #888888;"><span></span></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-8 col-6"
-                        style="background-color: #fbb21d;border-radius: 50px 0px 0 50px;color:#ffffff">
+                        style="background-color: #fbb21d;color:#ffffff;box-shadow: inset -3px 3px 3px 0px #888888;">
                         <div class="header-menu-area">
                             <div class="primary_menu">
                                 <nav class="main-menu {{ $bs->is_quote == 0 ? 'mr-0' : '' }}">
