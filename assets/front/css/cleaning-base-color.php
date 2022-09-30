@@ -358,7 +358,7 @@ background: <?php echo $color; ?>;
 border-right: 2px solid <?php echo $color; ?>1;
 }
 .main-menu ul li a {
-color: <?php echo $color; ?>;
+color: #ffffff;
 }
 h1, h2, h3, h4, h5, h6 {
 color: <?php echo $color; ?>;

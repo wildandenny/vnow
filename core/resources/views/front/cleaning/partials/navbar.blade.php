@@ -5,7 +5,7 @@
 
     <!-- HEADER START -->
     <header class="@yield('no-breadcrumb')">
-        <section class="top-header-area">
+        {{-- <section class="top-header-area">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6 col-12">
@@ -16,7 +16,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="top_right d-flex">
-                            @if (!empty($currentLang) && count($langs) > 1)
+                            {{-- @if (!empty($currentLang) && count($langs) > 1)
                                 <ul class="top-header-language">
                                     <li><a href="#"><i class="fas fa-globe"></i>{{convertUtf8($currentLang->name)}} <i class="fa fa-angle-down"></i></a>
                                         <ul class="language-dropdown">
@@ -26,8 +26,8 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            @endif
-                            <div class="top-header-social-links">
+                            @endif --}}
+                            {{-- <div class="top-header-social-links">
                                 <ul>
                                     @foreach ($socials as $key => $social)
                                         <li><a href="{{$social->url}}"><i class="{{$social->icon}}"></i></a></li>
@@ -116,16 +116,17 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>  --}}
         <section class="bottom-header-area">
             <div class="container-fluid">
                 <div class="row align-items-center position-relative">
-                    <div class="col-lg-2 col-6">
+                    <div class="col-lg-2 col-6" >
                         <div class="logo">
                             <a href="{{route('front.index')}}"><img data-src="{{asset('assets/front/img/'.$bs->logo)}}" class="img-fluid lazy" alt=""></a>
                         </div>
                     </div>
-                    <div class="col-lg-10 col-6">
+                 
+                    <div class="col-lg-10 col-6" style="background-color: #fbb21d;border-radius: 50px 0px 0 50px;color:#ffffff">
                         <div class="header-menu-area">
                             <div class="primary_menu">
                                 <nav class="main-menu {{$bs->is_quote == 0 ? 'mr-0' : ''}}">
@@ -200,9 +201,6 @@
                                 </nav>
                             </div>
 
-                            @if ($bs->is_quote == 1)
-                                <a href="{{route('front.quote')}}" class="cleaning-main-btn header-bgn d-none d-lg-inline-block">{{__('Get Quote')}}</a>
-                            @endif
                         </div>
                     </div>
                     <div class="col-sm-12 position-static"><div class="mobile_menu"></div></div>
