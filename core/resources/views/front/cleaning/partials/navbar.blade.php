@@ -27,7 +27,7 @@
                                     </li>
                                 </ul>
                             @endif --}}
-                            {{-- <div class="top-header-social-links">
+        {{-- <div class="top-header-social-links">
                                 <ul>
                                     @foreach ($socials as $key => $social)
                                         <li><a href="{{$social->url}}"><i class="{{$social->icon}}"></i></a></li>
@@ -117,19 +117,31 @@
                 </div>
             </div>
         </section>  --}}
+        
         <section class="bottom-header-area">
             <div class="container-fluid">
-                <div class="row align-items-center position-relative">
-                    <div class="col-lg-2 col-6" >
-                        <div class="logo">
-                            <a href="{{route('front.index')}}"><img data-src="{{asset('assets/front/img/'.$bs->logo)}}" class="img-fluid lazy" alt=""></a>
+                <div class="row position-relative" style="background-color: #fbb21d;">
+                    <div class="col-lg-3 col-6" style="background-color:#ffffff;border-radius: 0 0 70px 0;height:90%;">
+                        <div class="logo" style="text-align: center;padding:10px;">
+                            <a href="{{ route('front.index') }}">
+                                <img
+                                    data-src="{{ asset('assets/front/img/' . $bs->logo) }}" class="img-fluid lazy" style="height:8ch;"
+                                    alt="">
+                            </a>
                         </div>
                     </div>
-                 
-                    <div class="col-lg-10 col-6" style="background-color: #fbb21d;border-radius: 50px 0px 0 50px;color:#ffffff">
+                    <div class="col-lg-1" style="padding-bottom: 0px;">
+                        <div class="row">
+                            <div class="col-lg-12" style="background-color: #ffffff;padding: 0px;height:2.3rem;">
+                                <div style="height:100%;width:100%;background-color:#fbb21d;border-radius:70px 0 0 0;"><span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-6"
+                        style="background-color: #fbb21d;border-radius: 50px 0px 0 50px;color:#ffffff">
                         <div class="header-menu-area">
                             <div class="primary_menu">
-                                <nav class="main-menu {{$bs->is_quote == 0 ? 'mr-0' : ''}}">
+                                <nav class="main-menu {{ $bs->is_quote == 0 ? 'mr-0' : '' }}">
                                     @php
                                         $links = json_decode($menus, true);
                                         //  dd($links);
@@ -141,36 +153,37 @@
                                                 $href = getHref($link);
                                             @endphp
 
-                                            @if (strpos($link["type"], '-megamenu') !==  false)
+                                            @if (strpos($link['type'], '-megamenu') !== false)
                                                 @includeIf('front.gym.partials.mega-menu')
-
                                             @else
-
-                                                @if (!array_key_exists("children",$link))
-                                                    {{--- Level1 links which doesn't have dropdown menus ---}}
-                                                    <li><a href="{{$href}}" target="{{$link["target"]}}">{{$link["text"]}}</a></li>
-
+                                                @if (!array_key_exists('children', $link))
+                                                    {{-- - Level1 links which doesn't have dropdown menus - --}}
+                                                    <li><a href="{{ $href }}"
+                                                            target="{{ $link['target'] }}">{{ $link['text'] }}</a></li>
                                                 @else
                                                     <li class="menu-item-has-children">
-                                                        {{--- Level1 links which has dropdown menus ---}}
-                                                        <a href="{{$href}}" target="{{$link["target"]}}">{{$link["text"]}}</a>
+                                                        {{-- - Level1 links which has dropdown menus - --}}
+                                                        <a href="{{ $href }}"
+                                                            target="{{ $link['target'] }}">{{ $link['text'] }}</a>
 
                                                         <ul class="sub-menu">
 
 
 
                                                             {{-- START: 2nd level links --}}
-                                                            @foreach ($link["children"] as $level2)
+                                                            @foreach ($link['children'] as $level2)
                                                                 @php
                                                                     $l2Href = getHref($level2);
                                                                 @endphp
 
-                                                                <li @if(array_key_exists("children", $level2)) class="submenus" @endif>
-                                                                    <a  href="{{$l2Href}}" target="{{$level2["target"]}}">{{$level2["text"]}}</a>
+                                                                <li
+                                                                    @if (array_key_exists('children', $level2)) class="submenus" @endif>
+                                                                    <a href="{{ $l2Href }}"
+                                                                        target="{{ $level2['target'] }}">{{ $level2['text'] }}</a>
 
                                                                     {{-- START: 3rd Level links --}}
                                                                     @php
-                                                                        if (array_key_exists("children", $level2)) {
+                                                                        if (array_key_exists('children', $level2)) {
                                                                             create_menu($level2);
                                                                         }
                                                                     @endphp
@@ -186,8 +199,6 @@
 
                                                     </li>
                                                 @endif
-
-
                                             @endif
 
 
@@ -195,7 +206,8 @@
                                         @endforeach
 
                                         @if ($bs->is_quote == 1)
-                                            <li class="d-block d-lg-none"><a href="{{route('front.quote')}}">{{__('Get Quote')}}</a></li>
+                                            <li class="d-block d-lg-none"><a
+                                                    href="{{ route('front.quote') }}">{{ __('Get Quote') }}</a></li>
                                         @endif
                                     </ul>
                                 </nav>
@@ -203,7 +215,9 @@
 
                         </div>
                     </div>
-                    <div class="col-sm-12 position-static"><div class="mobile_menu"></div></div>
+                    <div class="col-sm-12 position-static">
+                        <div class="mobile_menu"></div>
+                    </div>
                 </div>
             </div>
         </section>
