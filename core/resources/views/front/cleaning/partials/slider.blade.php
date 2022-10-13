@@ -1,6 +1,6 @@
     <!-- HERO PART START -->
-    <section class="hero-area">
-        <div class="hero-carousel-active">
+    <section class="hero-area" style="max-height:100vh;">
+        <div class="hero-carousel-active" style="max-height:100vh;">
             @if (!empty($sliders))
                 @foreach ($sliders as $key => $slider)
                     <div class="single-carousel-active lazy" data-bg="{{asset('assets/front/img/sliders/'.$slider->image)}}" style="background-size: cover;">

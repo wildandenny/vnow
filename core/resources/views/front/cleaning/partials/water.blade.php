@@ -1,5 +1,5 @@
     <!-- HERO PART START -->
-    <section class="hero-area">
+    <section class="hero-area" style="height:100vh;">
         <div class="hero-carousel-active">
             <div class="single-carousel-active lazy" data-bg="{{asset('assets/front/img/'.$bs->hero_bg)}}" id="heroHome4" style="background-size: cover;">
                 <div class="container">

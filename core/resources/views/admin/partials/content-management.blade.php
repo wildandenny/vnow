@@ -592,7 +592,7 @@
 
 
             {{-- Career Page --}}
-            <li class="
+            {{-- <li class="
             @if(request()->path() == 'admin/jcategorys') selected
             @elseif(request()->path() == 'admin/job/create') selected
             @elseif(request()->is('admin/jcategory/*/edit')) selected
@@ -636,7 +636,7 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> --}}
 
 
             {{-- Contact Page --}}

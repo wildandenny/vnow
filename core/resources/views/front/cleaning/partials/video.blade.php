@@ -1,5 +1,5 @@
     <!-- HERO PART START -->
-    <section class="hero-area">
+    <section class="hero-area" style="height:100vh;">
         <div class="hero-carousel-active">
             <div class="single-carousel-active lazy" data-bg="{{asset('assets/front/img/'.$bs->hero_bg)}}" id="hero-home-5" style="background-size: cover;">
                 <div id="bgndVideo" data-property="{videoURL:'{{$bs->hero_section_video_link}}',containment:'#hero-home-5', quality:'large', autoPlay:true, loop:true, mute:true, opacity:1}"></div>

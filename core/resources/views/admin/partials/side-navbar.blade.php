@@ -97,11 +97,11 @@ $data = \App\BasicExtra::first();
                 @elseif(request()->path() == 'admin/home-page') show
                 @endif" id="themeHome">
                 <ul class="nav nav-collapse">
-                    <li class="@if(request()->path() == 'admin/home-settings') active @endif">
+                    {{-- <li class="@if(request()->path() == 'admin/home-settings') active @endif">
                         <a href="{{route('admin.homeSettings')}}">
                             <span class="sub-item">Settings</span>
                         </a>
-                    </li>
+                    </li> --}}
                     @if ($bex->home_page_pagebuilder == 1)
 
                     <li class="@if(request()->path() == 'admin/home-page') active @endif">
@@ -1152,16 +1152,16 @@ id="course"
 @elseif(request()->path() == 'admin/sitemap') show
 @endif" id="basic">
 <ul class="nav nav-collapse">
-    <li class="@if(request()->path() == 'admin/basicinfo') active @endif">
+    {{-- <li class="@if(request()->path() == 'admin/basicinfo') active @endif">
         <a href="{{route('admin.basicinfo')}}">
             <span class="sub-item">General Settings</span>
         </a>
-    </li>
+    </li> --}}
     <li class="submenu">
-        <a data-toggle="collapse" href="#emailset" aria-expanded="{{(request()->path() == 'admin/mail-from-admin' || request()->path() == 'admin/mail-to-admin' || request()->path() == 'admin/email-templates' || request()->routeIs('admin.email.editTemplate')) ? 'true' : 'false' }}">
+        {{-- <a data-toggle="collapse" href="#emailset" aria-expanded="{{(request()->path() == 'admin/mail-from-admin' || request()->path() == 'admin/mail-to-admin' || request()->path() == 'admin/email-templates' || request()->routeIs('admin.email.editTemplate')) ? 'true' : 'false' }}">
             <span class="sub-item">Email Settings</span>
             <span class="caret"></span>
-        </a>
+        </a> --}}
         <div class="collapse {{(request()->path() == 'admin/mail-from-admin' || request()->path() == 'admin/mail-to-admin' || request()->path() == 'admin/email-templates' || request()->routeIs('admin.email.editTemplate')) ? 'show' : '' }}" id="emailset" style="">
             <ul class="nav nav-collapse subnav">
                 <li class="@if(request()->path() == 'admin/mail-from-admin') active @endif">
@@ -1215,19 +1215,19 @@ id="course"
             <span class="sub-item">Social Links</span>
         </a>
     </li>
-    <li class="@if(request()->path() == 'admin/heading') active @endif">
+    {{-- <li class="@if(request()->path() == 'admin/heading') active @endif">
         <a href="{{route('admin.heading') . '?language=' . $default->code}}">
             <span class="sub-item">Page Headings</span>
         </a>
-    </li>
+    </li> --}}
     <li class="
     @if(request()->path() == 'admin/gateways') selected
     @elseif(request()->path() == 'admin/offline/gateways') selected
     @endif">
-    <a data-toggle="collapse" href="#gateways">
+    {{-- <a data-toggle="collapse" href="#gateways">
         <span class="sub-item">Payment Gateways</span>
         <span class="caret"></span>
-    </a>
+    </a> --}}
     <div class="collapse
     @if(request()->path() == 'admin/gateways') show
     @elseif(request()->path() == 'admin/offline/gateways') show
@@ -1251,15 +1251,15 @@ id="course"
 @elseif(request()->is('admin/language/*/edit')) active
 @elseif(request()->is('admin/language/*/edit/keyword')) active
 @endif">
-<a href="{{route('admin.language.index')}}">
+{{-- <a href="{{route('admin.language.index')}}">
     <span class="sub-item">Language</span>
-</a>
+</a> --}}
 </li>
-<li class="@if(request()->path() == 'admin/script') active @endif">
+{{-- <li class="@if(request()->path() == 'admin/script') active @endif">
     <a href="{{route('admin.script')}}">
         <span class="sub-item">Plugins</span>
     </a>
-</li>
+</li> --}}
 <li class="@if(request()->path() == 'admin/seo') active @endif">
     <a href="{{route('admin.seo') . '?language=' . $default->code}}">
         <span class="sub-item">SEO Information</span>
@@ -1281,10 +1281,10 @@ id="course"
 @if(request()->path() == 'admin/backup') selected
 @elseif(request()->path() == 'admin/sitemap') selected
 @endif">
-<a data-toggle="collapse" href="#misc">
+{{-- <a data-toggle="collapse" href="#misc">
     <span class="sub-item">MISC</span>
     <span class="caret"></span>
-</a>
+</a> --}}
 <div class="collapse
 @if(request()->path() == 'admin/backup') show
 @elseif(request()->path() == 'admin/sitemap') show

@@ -299,6 +299,9 @@
     .breadcrumb-area .breadcrumb-txt {
         padding: 110px 0 110px !important
     }
+    .header-menu-desktop{
+        display: none;
+    }
 }
 
 @media (max-width:767px) {
