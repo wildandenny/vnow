@@ -130,14 +130,14 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-1" style="padding-bottom: 0px;">
+                    <div class="col-lg-1 header-menu-desktop" style="padding-bottom: 0px;">
                         <div class="row">
                             <div class="col-lg-12" style="background-color: #007A45;padding: 0px;height:2.3rem;">
                                 <div style="height:100%;width:100%;background-color:#fbb21d;border-radius:70px 0 0 0;box-shadow: inset 3px 3px 3px 0px #888888;"><span></span></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8 col-6"
+                    <div class="col-lg-8 col-6 header-menu-desktop"
                         style="background-color: #fbb21d;color:#ffffff;box-shadow: inset -3px 3px 3px 0px #888888;">
                         <div class="header-menu-area">
                             <div class="primary_menu">

@@ -116,7 +116,7 @@
     .mean-container .mean-nav {
         margin-top: 10px;
         max-height: 400px;
-        overflow: scroll;
+        /* overflow: scroll; */
     }
     .mean-container a.meanmenu-reveal {
         top: -27px;
@@ -367,11 +367,18 @@
     .single-team-item img {
         width: 100%
     }
+    .header-menu-desktop{
+        display: none;
+    }
 }
 
 @media only screen and (min-width:480px) and (max-width:767px) {
     .container {
         width: 450px
+    }
+
+    .header-menu-desktop{
+        display: none;
     }
 }
 
@@ -384,5 +391,9 @@
     }
     ul.login {
         margin-left: 0
+    }
+
+    .header-menu-desktop{
+        display: none;
     }
 }
