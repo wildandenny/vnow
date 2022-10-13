@@ -136,23 +136,23 @@ $data = \App\BasicExtra::first();
         @elseif(request()->path() == 'admin/megamenus/edit') show
         @endif" id="websiteMenu">
         <ul class="nav nav-collapse">
-            <li class="@if(request()->path() == 'admin/megamenus') active
+            {{-- <li class="@if(request()->path() == 'admin/megamenus') active
                 @elseif(request()->path() == 'admin/megamenus/edit') active
                 @endif">
                 <a href="{{route('admin.megamenus') . '?language=' . $default->code}}">
                     <span class="sub-item">Mega Menus</span>
                 </a>
-            </li>
+            </li> --}}
             <li class="@if(request()->path() == 'admin/menu-builder') active @endif">
                 <a href="{{route('admin.menu_builder.index') . '?language=' . $default->code}}">
                     <span class="sub-item">Main Menu</span>
                 </a>
             </li>
-            <li class="@if(request()->path() == 'admin/permalinks') active @endif">
+            {{-- <li class="@if(request()->path() == 'admin/permalinks') active @endif">
                 <a href="{{route('admin.permalinks.index')}}">
                     <span class="sub-item">Permalinks</span>
                 </a>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </li>
