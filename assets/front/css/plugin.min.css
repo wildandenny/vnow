@@ -5765,7 +5765,7 @@ a.meanmenu-reveal {
 .mean-container .mean-nav {
   float: left;
   width: 100%;
-  background: #010e2a;
+  background: #007a45;
   margin-top: 44px;
 }
 .mean-container .mean-nav ul {
@@ -5778,7 +5778,7 @@ a.meanmenu-reveal {
   position: relative;
   float: left;
   width: 100%;
-  border-bottom: 1px solid #8e6459;
+  border-bottom: 1px solid #0b8b53;
 }
 .mean-container .mean-nav ul li:last-child {
   border-bottom: none;
@@ -5831,7 +5831,7 @@ a.meanmenu-reveal {
   top: 0;
   z-index: 2;
   font-weight: 700;
-  background: #010e2a;
+  background: #007a45;
   border: none !important;
 }
 .mean-container .mean-nav ul li a.mean-expand:hover {

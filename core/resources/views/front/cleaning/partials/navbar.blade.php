@@ -205,10 +205,10 @@
 
                                         @endforeach
 
-                                        @if ($bs->is_quote == 1)
+                                        {{-- @if ($bs->is_quote == 1)
                                             <li class="d-block d-lg-none"><a
                                                     href="{{ route('front.quote') }}">{{ __('Get Quote') }}</a></li>
-                                        @endif
+                                        @endif --}}
                                     </ul>
                                 </nav>
                             </div>

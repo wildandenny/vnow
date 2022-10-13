@@ -607,11 +607,12 @@ li.submenus::after {
 }
 
 .mean-container a.meanmenu-reveal {
-    color: #13287e
+    margin-right:15px;
+    color: #007A45
 }
 
 .mean-container a.meanmenu-reveal span {
-    background: #13287e
+    background: #007A45
 }
 
 .main-menu {
@@ -2343,3 +2344,4 @@ a.proceed-checkout-btn {
     margin-right: -4px;
     margin-left: auto;
 }
+
