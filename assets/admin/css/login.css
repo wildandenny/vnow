@@ -98,8 +98,8 @@
   display: inline-block;
 }
 body {
-  background: #76b852; /* fallback for old browsers */
-  background: #1a2035;
+  background: #007A45; /* fallback for old browsers */
+  background: #007A45;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
