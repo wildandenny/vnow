@@ -54,7 +54,7 @@
             <tr><td class="strong small gry-color">Bill to:</td></tr>
             <tr><td class="strong">{{$request["name"] ? ucfirst($request["name"]) : "Anonymous"}}</td></tr>
             <tr><td class="gry-color small">Anonymous</td></tr>
-            <tr><td class="gry-color small">Email: suppot@plusagency.com</td></tr>
+            <tr><td class="gry-color small">Email: </td></tr>
             <tr><td class="gry-color small">Phone: +88888888888</td></tr>
         </table>
     </div>
