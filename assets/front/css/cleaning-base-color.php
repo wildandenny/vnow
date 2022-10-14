@@ -382,9 +382,7 @@ color: <?php echo $color1; ?>;
 .scroll-to-top {
 background: <?php echo $color1; ?>;
 }
-.bottom-header-area.sticky {
-  
-}
+
 .single-service-bg span {
 background: <?php echo $color1; ?>;
 }

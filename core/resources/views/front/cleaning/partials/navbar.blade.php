@@ -4,7 +4,7 @@
     @endphp
 
     <!-- HEADER START -->
-    <header class="@yield('no-breadcrumb')">
+    <header class="@yield('no-breadcrumb') header-area header-absolute">
         {{-- <section class="top-header-area">
             <div class="container-fluid">
                 <div class="row align-items-center">

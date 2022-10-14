@@ -551,6 +551,8 @@ input[type=submit]:hover {
     top: -10px;
     background: #fff;
     transition: .3s ease-in-out;
+    -webkit-animation: navFadeIn 1s;
+    animation: navFadeIn 1s;
     z-index: 200;
     border-bottom: 1px solid #ffc600
 }
@@ -2343,5 +2345,20 @@ a.proceed-checkout-btn {
     padding-left: 15px;
     margin-right: -4px;
     margin-left: auto;
+}
+
+.header-absolute {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.layer {
+    background-color: rgba(248, 247, 216, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
