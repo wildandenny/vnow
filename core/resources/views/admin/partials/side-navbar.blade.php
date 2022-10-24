@@ -97,11 +97,11 @@ $data = \App\BasicExtra::first();
                 @elseif(request()->path() == 'admin/home-page') show
                 @endif" id="themeHome">
                 <ul class="nav nav-collapse">
-                    {{-- <li class="@if(request()->path() == 'admin/home-settings') active @endif">
+                    <li class="@if(request()->path() == 'admin/home-settings') active @endif">
                         <a href="{{route('admin.homeSettings')}}">
                             <span class="sub-item">Settings</span>
                         </a>
-                    </li> --}}
+                    </li>
                     @if ($bex->home_page_pagebuilder == 1)
 
                     <li class="@if(request()->path() == 'admin/home-page') active @endif">
