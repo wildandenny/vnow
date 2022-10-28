@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    font-family: Muli, sans-serif;
+    font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #6a6b71
@@ -743,16 +743,22 @@ li.submenus::after {
 
 .hero-content h1 {
     font-size: 76px;
-    font-weight: 800;
+    font-weight: 600;
     margin-bottom: 40px;
 }
 
 .hero-content {
-    padding: 225px 0;
+    /* padding: 225px 0; */
     background-size: cover;
     background-position: center center;
-    position: relative;
-    z-index: 100
+    z-index: 100;
+    /* position: relative; */
+    position: fixed;
+    bottom:5%;
+    left:0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .single-carousel-active.hero-bg-2 .hero-content h1 {

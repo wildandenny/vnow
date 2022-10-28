@@ -1,5 +1,6 @@
 (function ($) {
     'use strict';
+    $('.scroll-to-top').hide();
 
 
     //scroll-to-top

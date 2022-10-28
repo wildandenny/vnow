@@ -4,7 +4,7 @@
             <div class="single-carousel-active">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-8">
+                        <div class="col-xl-6 col-lg-8" style="text-align:center;">
                             <div class="hero-content">
                                 <span style="font-size: {{$be->hero_section_title_font_size}}px">{{convertUtf8($bs->hero_section_title)}}</span>
                                 <h1 style="font-size: {{$be->hero_section_bold_text_font_size}}px; color: #{{$be->hero_section_bold_text_color}};">{{$bs->hero_section_bold_text}}</h1>

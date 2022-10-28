@@ -377,7 +377,7 @@ background: <?php echo $color1; ?>;
 }
 .main-btn:hover {
 border: 1px solid <?php echo $color1; ?>;
-color: <?php echo $color1; ?>;
+color: #ffff;
 }
 .scroll-to-top {
 background: <?php echo $color1; ?>;
@@ -388,14 +388,14 @@ background: <?php echo $color1; ?>;
 }
 .main-btn:hover {
 border: 1px solid <?php echo $color1; ?>;
-color: <?php echo $color1; ?>;
+color: #ffff;
 }
 .main-btn {
 background: <?php echo $color1; ?>;
 }
 .main-btn:hover {
 border: 1px solid <?php echo $color1; ?>;
-color: <?php echo $color1; ?>;
+color: #ffff;
 }
 .single-counter-item > span {
 color: <?php echo $color1; ?>;
