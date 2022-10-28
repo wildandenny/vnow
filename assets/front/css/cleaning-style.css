@@ -631,7 +631,7 @@ li.submenus::after {
     display: block;
     font-size: 18px;
     font-weight: 700;
-    padding: 40px 15px;
+    padding: 32px 15px;
     transition: .5s ease-in-out;
     color: #13287e;
 }

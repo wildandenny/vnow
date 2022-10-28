@@ -5,7 +5,7 @@
 
     <!-- HEADER START -->
     <header class="@yield('no-breadcrumb') header-area header-absolute">
-        {{-- <section class="top-header-area">
+        <section class="top-header-area" style="background-color: #00542F">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6 col-12">
@@ -27,7 +27,7 @@
                                     </li>
                                 </ul>
                             @endif --}}
-        {{-- <div class="top-header-social-links">
+         <div class="top-header-social-links">
                                 <ul>
                                     @foreach ($socials as $key => $social)
                                         <li><a href="{{$social->url}}"><i class="{{$social->icon}}"></i></a></li>
@@ -116,7 +116,7 @@
                     </div>
                 </div>
             </div>
-        </section>  --}}
+        </section> 
         
         <section class="bottom-header-area">
             <div class="container-fluid-head">
@@ -125,14 +125,14 @@
                         <div class="logo" style="text-align: center;padding:10px;">
                             <a href="{{ route('front.index') }}">
                                 <img
-                                    data-src="{{ asset('assets/front/img/' . $bs->logo) }}" class="img-fluid lazy" style="height:8ch;"
+                                    data-src="{{ asset('assets/front/img/' . $bs->logo) }}" class="img-fluid lazy" style="height:6.5ch;"
                                     alt="">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-1 header-menu-desktop" style="padding-bottom: 0px;">
                         <div class="row">
-                            <div class="col-lg-12" style="background-color: #007A45;padding: 0px;height:2.3rem;">
+                            <div class="col-lg-12" style="background-color: #007A45;padding: 0px;height:1.2rem;">
                                 <div style="height:100%;width:100%;background-color:#fbb21d;border-radius:70px 0 0 0;box-shadow: inset 3px 3px 3px 0px #888888;"><span></span></div>
                             </div>
                         </div>
