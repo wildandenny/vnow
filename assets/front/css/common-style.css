@@ -3737,6 +3737,10 @@ a#cartIcon .cart-total {
   padding-top: 120px;
 }
 
+.pt-60 {
+  padding-top: 60px;
+}
+
 .pb-120 {
   padding-bottom: 120px;
 }

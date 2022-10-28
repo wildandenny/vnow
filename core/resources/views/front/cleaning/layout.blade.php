@@ -122,7 +122,7 @@
 
 
     <!-- FOOTER PART START -->
-    <footer class="footer-area pt-120">
+    <footer class="footer-area pt-60">
         @if (!($bex->home_page_pagebuilder == 0 && $bs->top_footer_section == 0))
         <div class="container">
             <div class="row">
