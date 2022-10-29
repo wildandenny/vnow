@@ -1286,6 +1286,12 @@ Route::group(['middleware' => ['setlang']], function () {
       Route::get("$permalink/{slug}", 'Front\FrontendController@blogdetails')->name('front.blogdetails');
     } elseif ($type == 'campaign_details') {
       Route::get("$permalink/{slug}", 'Front\FrontendController@campaigndetails')->name('front.campaigndetails');
+    } elseif ($type == 'training_details') {
+      Route::get("$permalink/{slug}", 'Front\FrontendController@trainingdetails')->name('front.trainingdetails');
+    } elseif ($type == 'seminar_details') {
+      Route::get("$permalink/{slug}", 'Front\FrontendController@seminardetails')->name('front.seminardetails');
+    } elseif ($type == 'summit_details') {
+      Route::get("$permalink/{slug}", 'Front\FrontendController@summitdetails')->name('front.summitdetails');
     } elseif ($type == 'rss_details') {
       Route::get("$permalink/{slug}/{id}", 'Front\FrontendController@rssdetails')->name('front.rssdetails');
     }
@@ -1370,7 +1376,16 @@ Route::group(['middleware' => ['setlang']], function () {
     } elseif ($type == 'campaign') {
       $action = 'Front\FrontendController@blogs';
       $routeName = 'front.campaign';
-    } elseif ($type == 'admin_login') {
+    } elseif ($type == 'training') {
+      $action = 'Front\FrontendController@blogs';
+      $routeName = 'front.campaign';
+    } elseif ($type == 'seminar') {
+      $action = 'Front\FrontendController@blogs';
+      $routeName = 'front.campaign';
+    } elseif ($type == 'summit') {
+      $action = 'Front\FrontendController@blogs';
+      $routeName = 'front.campaign';
+    }elseif ($type == 'admin_login') {
       $action = 'Admin\LoginController@login';
       $routeName = 'admin.login';
       Route::get("$permalink", "$action")->name("$routeName")->middleware('guest:admin');

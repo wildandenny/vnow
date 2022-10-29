@@ -596,6 +596,21 @@ class FrontendController extends Controller
         return view('front.campaign', $data);
        }
 
+       if($catid == 45){
+        //training
+        return view('front.training', $data);
+       }
+
+       if($catid == 46){
+        //seminar
+        return view('front.seminar', $data);
+       }
+
+       if($catid == 47){
+        //summit
+        return view('front.summit', $data);
+       }
+
         return view('front.blogs', $data);
     }
 
@@ -653,6 +668,90 @@ class FrontendController extends Controller
         $data['version'] = $version;
 
         return view('front.campaign-details', $data);
+    }
+
+    public function trainingdetails($slug)
+    {
+        if (session()->has('lang')) {
+            $currentLang = Language::where('code', session()->get('lang'))->first();
+        } else {
+            $currentLang = Language::where('is_default', 1)->first();
+        }
+
+        $lang_id = $currentLang->id;
+
+
+        $data['blog'] = Blog::where('slug', $slug)->firstOrFail();
+
+        $data['archives'] = Archive::orderBy('id', 'DESC')->get();
+        $data['bcats'] = Bcategory::where('status', 1)->where('language_id', $lang_id)->orderBy('serial_number', 'ASC')->get();
+
+        $be = $currentLang->basic_extended;
+        $version = $be->theme_version;
+
+        if ($version == 'dark') {
+            $version = 'default';
+        }
+
+        $data['version'] = $version;
+
+        return view('front.training-details', $data);
+    }
+
+    public function seminardetails($slug)
+    {
+        if (session()->has('lang')) {
+            $currentLang = Language::where('code', session()->get('lang'))->first();
+        } else {
+            $currentLang = Language::where('is_default', 1)->first();
+        }
+
+        $lang_id = $currentLang->id;
+
+
+        $data['blog'] = Blog::where('slug', $slug)->firstOrFail();
+
+        $data['archives'] = Archive::orderBy('id', 'DESC')->get();
+        $data['bcats'] = Bcategory::where('status', 1)->where('language_id', $lang_id)->orderBy('serial_number', 'ASC')->get();
+
+        $be = $currentLang->basic_extended;
+        $version = $be->theme_version;
+
+        if ($version == 'dark') {
+            $version = 'default';
+        }
+
+        $data['version'] = $version;
+
+        return view('front.seminar-details', $data);
+    }
+
+    public function summitdetails($slug)
+    {
+        if (session()->has('lang')) {
+            $currentLang = Language::where('code', session()->get('lang'))->first();
+        } else {
+            $currentLang = Language::where('is_default', 1)->first();
+        }
+
+        $lang_id = $currentLang->id;
+
+
+        $data['blog'] = Blog::where('slug', $slug)->firstOrFail();
+
+        $data['archives'] = Archive::orderBy('id', 'DESC')->get();
+        $data['bcats'] = Bcategory::where('status', 1)->where('language_id', $lang_id)->orderBy('serial_number', 'ASC')->get();
+
+        $be = $currentLang->basic_extended;
+        $version = $be->theme_version;
+
+        if ($version == 'dark') {
+            $version = 'default';
+        }
+
+        $data['version'] = $version;
+
+        return view('front.summit-details', $data);
     }
 
     public function knowledgebase()
