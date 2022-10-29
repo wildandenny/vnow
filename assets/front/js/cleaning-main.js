@@ -1,8 +1,10 @@
 (function ($) {
     'use strict';
     $('.scroll-to-top').hide();
+    $('.recommendations-layout').hide();
 
     $('.hero-content').fadeIn(200);
+
 
     //scroll-to-top
     $(window).scroll(function () {

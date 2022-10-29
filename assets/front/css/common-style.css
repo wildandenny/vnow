@@ -197,7 +197,7 @@ ul.breadcumb li:last-child::after {
 }
 
 .breadcrumb-area .breadcrumb-txt {
-  padding: 230px 0 82px 0;
+  padding: 170px 0 42px 0;
 }
 
 .breadcrumb-area {
@@ -541,7 +541,7 @@ ul.breadcumb li:last-child::after {
 }
 
 .blog-lists {
-  padding: 120px 0 120px;
+  padding: 60px 0 120px;
 }
 
 .blog-bg {

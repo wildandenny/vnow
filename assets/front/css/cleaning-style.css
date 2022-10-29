@@ -2013,7 +2013,7 @@ h1.bg-3 {
 }
 
 .breadcrumb-area .breadcrumb-txt {
-    padding: 90px 0 82px 0 !important
+    /* padding: 90px 0 82px 0 !important */
 }
 
 .breadcrumb-txt span {
