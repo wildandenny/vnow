@@ -32,6 +32,12 @@
             color: #212529;
             margin-top: 20px;
         }
+
+        .slick-initialized .slick-slide {
+            display: block;
+            height:100%;
+            /* border: 1px solid #0000000a; */
+        }
     </style>
 @endsection
 
@@ -92,7 +98,7 @@
                                 <span class="location"><i class="fas fa-map-marker-alt"></i>{{$event->venue_location}}</span>
                                 @endif
                             </div>
-                            <p class="price base-color">{{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}}{{$event->cost}}{{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}} / {{__('per ticket')}}</p>
+                            {{-- <p class="price base-color">{{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}}{{$event->cost}}{{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}} / {{__('per ticket')}}</p> --}}
                             <div id="purchase-section" style="display: block">
                                 <div class="time-count">
                                     <div id="simple_timer"></div>
@@ -136,22 +142,22 @@
                                  style="display: none; justify-content: center; text-align: center">
                                  @if ($bex->event_guest_checkout == 1 && !Auth::check())
                                     <div class="alert alert-warning">
-                                        {{__('You are now purchasing ticket as a guest. If you want to login before purchasing, then please')}} <a href="{{route('user.login', ['redirected' => 'event'])}}">{{__('Click Here')}}</a>
+                                        {{__('You are now joining event as a guest. If you want to login before purchasing, then please')}} <a href="{{route('user.login', ['redirected' => 'event'])}}">{{__('Click Here')}}</a>
                                     </div>
                                 @endif
                                 <form action="{{route("front.event.payment")}}" method="POST"
                                       enctype="multipart/form-data">
                                     @csrf
                                     <hr>
-                                    <h4>{{__('Invoice')}}</h4>
+                                    {{-- <h4>{{__('Invoice')}}</h4> --}}
                                     <hr>
                                     <input type="hidden" name="event_id" value="{{$event->id}}">
                                     <input type="hidden" name="event_slug" value="{{$event->slug}}">
-                                    <div>{{__('No. Of Tickets')}}: <span id="quantity">5</span></div>
+                                    {{-- <div>{{__('No. Of Tickets')}}: <span id="quantity">5</span></div> --}}
                                     <input type="hidden" name="ticket_quantity" id="ticket-quantity" value="">
-                                    <div>{{__('Per Ticket Cost')}}: <span>{{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}}{{$event->cost}}{{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}} </span></div>
+                                    {{-- <div>{{__('Per Ticket Cost')}}: <span>{{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}}{{$event->cost}}{{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}} </span></div> --}}
                                     <input type="hidden" name="ticket_cost" id="ticket-cost" value="{{$event->cost}}">
-                                    <div>{{__('Total Cost')}}: <span>{{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}}<span id="total">100</span>{{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}}</span></div>
+                                    {{-- <div>{{__('Total Cost')}}: <span>{{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}}<span id="total">100</span>{{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}}</span></div> --}}
                                     <input type="hidden" name="total_cost" id="total-cost" value="">
                                     <br>
                                     <div id="donation-info-section">
@@ -162,7 +168,7 @@
                                         <input type="text" class="form_control" name="phone"
                                                placeholder="{{__('Enter your phone')}}" value="{{$phone}}">
                                     </div>
-                                    <div class="form_group"
+                                    {{-- <div class="form_group"
                                          style="display: flex; flex-direction: column; margin-top: 20px">
                                         <select name="payment_method" id="payment-method">
                                             <option value="0">{{__('Choose an option')}}</option>
@@ -171,7 +177,7 @@
                                                     value="{{$payment_gateway->name}}">{{$payment_gateway->name}}</option>
                                             @endforeach
                                         </select>
-                                    </div>
+                                    </div> --}}
                                     <div id="stripe-section" style="display: none">
                                         <input type="text" class="form_control" name="card_number"
                                                placeholder="{{__('Card Number')}}">
@@ -232,6 +238,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#vanue">{{__('Venue')}}</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#discuss">Discuss</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -242,10 +251,10 @@
                                         <p>{{date_format(date_create($event->date),"M d,Y")}}
                                             @ {{date_format(date_create($event->time),"h:i:sa")}}</p>
                                     </div>
-                                    <div class="info">
+                                    {{-- <div class="info">
                                         <span>{{__('Cost')}}:</span>
                                         <p>{{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}}{{$event->cost}}{{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}}</p>
-                                    </div>
+                                    </div> --}}
                                     <div class="info">
                                         <span>{{__('Event Categories')}}:</span>
                                         <p>{{convertUtf8($event->eventCategories->name)}}, {{__('Event')}}</p>
@@ -281,6 +290,11 @@
                                     @endif
                                 </div>
                             </div>
+                            <div id="discuss" class="tab-pane fade">
+                                <div class="comment-lists">
+                                    <div id="disqus_thread"></div>
+                                  </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -306,7 +320,7 @@
                                         </span>
                                     </div>
 
-                                    <p class="price base-color">{{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}}{{$moreEvent->cost}}{{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}}</p>
+                                    {{-- <p class="price base-color">{{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}}{{$moreEvent->cost}}{{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}}</p> --}}
                                 </div>
                             </div>
                         @endforeach
@@ -318,6 +332,9 @@
     <!--====== End Event details Section ======-->
 @endsection
 @section('scripts')
+@if($bs->is_disqus == 1)
+{!! $bs->disqus_script !!}
+@endif
 <script src="{{asset('/assets/front/js/jquery.nice-select.min.js')}}"></script>
 <script src="{{asset('/assets/front/js/jquery.nice-number.min.js')}}"></script>
 <script src="{{asset('/assets/front/js/jquery.easypiechart.min.js')}}"></script>

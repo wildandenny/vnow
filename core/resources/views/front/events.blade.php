@@ -88,9 +88,9 @@
                                 </div>
                                 <div class="event-content">
                                     <a class="cat c-1 base-bg text-white">{{$event->eventCategories->name}}</a>
-                                    <a class="cat c-1" href="{{route('front.events', ['category' => $event->eventCategories->id])}}">
+                                    {{-- <a class="cat c-1" href="{{route('front.events', ['category' => $event->eventCategories->id])}}">
                                         {{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}}{{$event->cost}}{{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}}
-                                    </a>
+                                    </a> --}}
                                     <h3><a href="{{route('front.event_details',[$event->slug])}}">
                                         {{strlen($event->title) > 30 ? mb_substr($event->title,0,30,'utf-8') . '...' : $event->title}}
                                     </a></h3>
