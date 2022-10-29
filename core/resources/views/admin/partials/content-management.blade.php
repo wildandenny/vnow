@@ -244,14 +244,14 @@
                     </a>
                     </li>
 
-                    @if ($bex->home_page_pagebuilder == 0)
+                    {{-- @if ($bex->home_page_pagebuilder == 0) --}}
 
                     <li class="@if(request()->path() == 'admin/introsection') active @endif">
                         <a href="{{route('admin.introsection.index') . '?language=' . $default->code}}">
                             <span class="sub-item">Intro Section</span>
                         </a>
                     </li>
-                    @endif
+                    {{-- @endif --}}
 
                     @if ($bex->home_page_pagebuilder == 0)
                     <li class="@if(request()->path() == 'admin/servicesection') active @endif">

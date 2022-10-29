@@ -33,7 +33,7 @@
 
 
     <!-- CATAGORIES PART START -->
-    @if (count($features) > 0)
+    {{-- @if (count($features) > 0)
     <section class="catagories-area pt-100 pb-100">
         <div class="container">
             <div class="catagories-carousel-active">
@@ -50,7 +50,7 @@
             </div>
         </div>
     </section>
-    @endif
+    @endif --}}
     <!-- CATAGORIES PART END -->
 
     @if (!empty($home->html))

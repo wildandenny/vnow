@@ -2,6 +2,7 @@
     'use strict';
     $('.scroll-to-top').hide();
 
+    $('.hero-content').fadeIn(200);
 
     //scroll-to-top
     $(window).scroll(function () {
