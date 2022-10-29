@@ -591,6 +591,10 @@ class FrontendController extends Controller
 
         $data['version'] = $version;
 
+       if($catid == 44){
+        //campaign
+        return view('front.campaign', $data);
+       }
 
         return view('front.blogs', $data);
     }
@@ -621,6 +625,34 @@ class FrontendController extends Controller
         $data['version'] = $version;
 
         return view('front.blog-details', $data);
+    }
+
+    public function campaigndetails($slug)
+    {
+        if (session()->has('lang')) {
+            $currentLang = Language::where('code', session()->get('lang'))->first();
+        } else {
+            $currentLang = Language::where('is_default', 1)->first();
+        }
+
+        $lang_id = $currentLang->id;
+
+
+        $data['blog'] = Blog::where('slug', $slug)->firstOrFail();
+
+        $data['archives'] = Archive::orderBy('id', 'DESC')->get();
+        $data['bcats'] = Bcategory::where('status', 1)->where('language_id', $lang_id)->orderBy('serial_number', 'ASC')->get();
+
+        $be = $currentLang->basic_extended;
+        $version = $be->theme_version;
+
+        if ($version == 'dark') {
+            $version = 'default';
+        }
+
+        $data['version'] = $version;
+
+        return view('front.campaign-details', $data);
     }
 
     public function knowledgebase()

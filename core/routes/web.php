@@ -1284,6 +1284,8 @@ Route::group(['middleware' => ['setlang']], function () {
       Route::get("$permalink/{slug}", 'Front\FrontendController@knowledgebase_details')->name('front.knowledgebase_details');
     } elseif ($type == 'blog_details') {
       Route::get("$permalink/{slug}", 'Front\FrontendController@blogdetails')->name('front.blogdetails');
+    } elseif ($type == 'campaign_details') {
+      Route::get("$permalink/{slug}", 'Front\FrontendController@campaigndetails')->name('front.campaigndetails');
     } elseif ($type == 'rss_details') {
       Route::get("$permalink/{slug}/{id}", 'Front\FrontendController@rssdetails')->name('front.rssdetails');
     }
@@ -1365,6 +1367,9 @@ Route::group(['middleware' => ['setlang']], function () {
     } elseif ($type == 'forget_password') {
       $action = 'User\ForgotController@showforgotform';
       $routeName = 'user-forgot';
+    } elseif ($type == 'campaign') {
+      $action = 'Front\FrontendController@blogs';
+      $routeName = 'front.campaign';
     } elseif ($type == 'admin_login') {
       $action = 'Admin\LoginController@login';
       $routeName = 'admin.login';
