@@ -398,7 +398,7 @@ border: 1px solid <?php echo $color1; ?>;
 color: #ffff;
 }
 .single-counter-item > span {
-color: <?php echo $color1; ?>;
+<!-- color: <?php echo $color1; ?>; -->
 }
 .play-btn {
 border: 1px solid <?php echo $color1; ?>;
@@ -453,7 +453,8 @@ background: <?php echo $color; ?>5a;
 background: <?php echo $color; ?>5a;
 }
 .single-counter-item > span:before {
-background: <?php echo $color; ?>;
+background: #182456;
+<!-- background: <?php echo $color; ?>; -->
 }
 input[type="submit"], button[type="submit"] {
 background-color: <?php echo $color; ?>;
