@@ -453,7 +453,7 @@ background: <?php echo $color; ?>5a;
 background: <?php echo $color; ?>5a;
 }
 .single-counter-item > span:before {
-background: #182456;
+background: #007a45;
 <!-- background: <?php echo $color; ?>; -->
 }
 input[type="submit"], button[type="submit"] {

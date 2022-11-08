@@ -997,8 +997,8 @@ div#map {
 }
 
 .contact-form-section .single-info {
-  margin-bottom: 30px;
-  padding: 40px 42px;
+  /* margin-bottom: 30px; */
+  padding: 40px 42px 0px;
 }
 
 .contact-form-section .single-info::after {

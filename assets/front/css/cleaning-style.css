@@ -1200,7 +1200,7 @@ span.count {
     content: '';
     bottom: 0;
     left: 0;
-    background: #eff1fa
+    /* background: #eff1fa */
 }
 
 .video-bg {

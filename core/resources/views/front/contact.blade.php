@@ -7,9 +7,9 @@
 @section('meta-keywords', "$be->contact_meta_keywords")
 @section('meta-description', "$be->contact_meta_description")
 
-@section('breadcrumb-title', $bs->contact_title)
-@section('breadcrumb-subtitle', $bs->contact_subtitle)
-@section('breadcrumb-link', __('Contact Us'))
+@section('breadcrumb-title', "Hubungi Kami")
+@section('breadcrumb-subtitle', "Butuh bantuan Kami? hubungi Kami dibawah ini")
+@section('breadcrumb-link', "Hubungi Kami")
 
 @section('content')
 
@@ -26,13 +26,16 @@
                             @php
                                 $addresses = explode(PHP_EOL, $bex->contact_addresses);
                             @endphp
-                            @foreach ($addresses as $address)
+                            @foreach ($addresses as $index => $address)
+                            @if($index == 0)
                             <p><i class="fas fa-map-pin base-color mr-1"></i> {{$address}}</p>
+                            @else
+                            <p>{{$address}}</p>
+                            @endif
                             @endforeach
+                          
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 single-info-col">
                     <div class="single-info wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeInRight;">
                         <div class="icon-wrapper"><i class="fas fa-phone"></i></div>
                         <div class="info-txt">
@@ -44,9 +47,7 @@
                             @endforeach
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 single-info-col">
-                    <div class="single-info wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s; animation-name: fadeInRight;">
+                    <div class="single-info wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s; animation-name: fadeInRight;margin-bottom:30px;">
                         <div class="icon-wrapper"><i class="far fa-envelope"></i></div>
                         <div class="info-txt">
                             @php
@@ -58,12 +59,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-8 single-info-col">
+                    <div class="map-wrapper">
+                        <div id="map">
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q={{$bex->latitude}},%20{{$bex->longitude}}+(My%20Business%20Name)&amp;t=&amp;z={{$bex->map_zoom}}&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 single-info-col">
+                    
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
-                <span class="section-title">{{convertUtf8($bs->contact_form_title)}}</span>
-                <h2 class="section-summary">{{convertUtf8($bs->contact_form_subtitle)}}</h2>
+            <div class="col-lg-12">
+                {{-- <span class="section-title">Hubungi Kami</span> --}}
+                <h2 class="section-summary">Hubungi Kami</h2>
                 <form action="{{route('front.sendmail')}}" class="contact-form" method="POST">
                     @csrf
                     <div class="row">
@@ -120,13 +131,9 @@
                     </div>
                 </form>
             </div>
-            <div class="col-lg-6">
-                <div class="map-wrapper">
-                    <div id="map">
-                        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q={{$bex->latitude}},%20{{$bex->longitude}}+(My%20Business%20Name)&amp;t=&amp;z={{$bex->map_zoom}}&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                    </div>
-                </div>
-            </div>
+            {{-- <div class="col-lg-6">
+                
+            </div> --}}
         </div>
     </div>
 </div>
