@@ -1593,4 +1593,34 @@ class FrontendController extends Controller
     {
         return redirect()->route('front.packageorder.index', $packageid)->with('success', __('Pament Compelted!'));
     }
+
+    public function forum()
+    {
+      
+        $bex = BasicExtra::first();
+
+        if ($bex->is_user_panel == 0) {
+            return back();
+        }
+
+        if (session()->has('lang')) {
+            $currentLang = Language::where('code', session()->get('lang'))->first();
+        } else {
+            $currentLang = Language::where('is_default', 1)->first();
+        }
+
+       
+
+        $be = $currentLang->basic_extended;
+        $version = $be->theme_version;
+
+        if ($version == 'dark') {
+            $version = 'default';
+        }
+
+        $data['version'] = $version;
+       
+
+        return view('front.forum', $data);
+    }
 }

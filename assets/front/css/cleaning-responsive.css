@@ -1,3 +1,10 @@
+@media (min-width:1500px) and (max-width:3000px) {
+  
+    .forum-section{
+        margin-top: 8.5rem;
+    }
+}
+
 @media (min-width:1200px) and (max-width:1500px) {
     .main-menu {
         margin-right: 30px
@@ -16,6 +23,10 @@
     }
     .main-menu ul li {
         margin-left: 0
+    }
+
+    .forum-section{
+        margin-top: 8.5rem;
     }
 }
 
@@ -82,13 +93,31 @@
         font-size: 14px;
         padding: 14px 32px !important;
     }
+
+    .forum-section{
+        margin-top: 8.5rem;
+    }
 }
+
+
 
 @media (min-width:768px) and (max-width:991px) {
     .single-catagories-item h4 {
         font-size: 17px
     }
+
+    .forum-section{
+        margin-top: 8.5rem;
+    }
 }
+@media only screen and (min-width:768px) and (max-width:870px) {
+    .forum-section{
+        margin-top: 10.2rem;
+    }
+}
+
+
+
 
 @media (max-width:991px) {
     .mean-container a.meanmenu-reveal {
@@ -302,6 +331,15 @@
     .header-menu-desktop{
         display: none;
     }
+    .forum-section{
+        margin-top: 8.5rem;
+    }
+}
+
+@media (max-width:870) {
+    .forum-section{
+        margin-top: 10.2em;
+    }
 }
 
 @media (max-width:767px) {
@@ -373,6 +411,16 @@
     .header-menu-desktop{
         display: none;
     }
+
+    .forum-section{
+        margin-top: 10.7rem;
+    }
+}
+
+@media (max-width:435px) {
+    .forum-section{
+        margin-top: 12.2rem;
+    }
 }
 
 @media only screen and (min-width:480px) and (max-width:767px) {
@@ -383,7 +431,11 @@
     .header-menu-desktop{
         display: none;
     }
+    .forum-section{
+        margin-top: 10.7rem;
+    }
 }
+
 
 @media only screen and (max-width:414px) {
     .top-header-social-links {
@@ -398,5 +450,15 @@
 
     .header-menu-desktop{
         display: none;
+    }
+
+    .forum-section{
+        margin-top: 12.2rem;
+    }
+}
+
+@media only screen and (max-width:270px) {
+    .forum-section{
+        margin-top: 13.7rem;
     }
 }

@@ -320,6 +320,7 @@ Route::post('/course/offline/{gatewayid}/submit', 'Payment\Course\OfflineControl
 
 Route::group(['middleware' => ['web', 'setlang']], function () {
   Route::get('/login', 'User\LoginController@showLoginForm')->name('user.login');
+  Route::get('/forum', 'Front\FrontendController@forum')->name('front.forum');
   Route::post('/login', 'User\LoginController@login')->name('user.login.submit');
   Route::get('/register', 'User\RegisterController@registerPage')->name('user-register');
   Route::post('/register/submit', 'User\RegisterController@register')->name('user-register-submit');
@@ -1385,7 +1386,10 @@ Route::group(['middleware' => ['setlang']], function () {
     } elseif ($type == 'summit') {
       $action = 'Front\FrontendController@blogs';
       $routeName = 'front.campaign';
-    }elseif ($type == 'admin_login') {
+    }elseif ($type == 'forum') {
+      $action = 'Front\FrontendController@forum';
+      $routeName = 'front.forum';
+    } elseif ($type == 'admin_login') {
       $action = 'Admin\LoginController@login';
       $routeName = 'admin.login';
       Route::get("$permalink", "$action")->name("$routeName")->middleware('guest:admin');

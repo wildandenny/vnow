@@ -38,7 +38,7 @@
                             @guest
                                 @if ($bex->is_user_panel == 1)
                                     <ul class="login">
-                                        <li><a href="{{route('user.login')}}">{{__('Login')}}</a></li>
+                                        <li><a href="{{route('front.forum')}}">Forum</a></li>
                                     </ul>
                                 @endif
                             @endguest

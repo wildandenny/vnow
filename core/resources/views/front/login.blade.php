@@ -16,6 +16,15 @@
 @section('content')
 
 
+{{-- <div class="row">
+    <div class="col-sm-12">
+        <div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="http://forum.vnow.id:8004/" class="embed-responsive-item" src="" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+</div> --}}
 <!--   hero area start    -->
 <div class="login-area">
     <div class="container">
