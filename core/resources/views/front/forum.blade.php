@@ -147,9 +147,10 @@
         </div>
     </div> --}}
 
+    
     <div class="row forum-section" >
         <div class="col-sm-12">
-                <iframe src="https://vnow.upjyco.com/forum/public" frameborder="0" id="myIframe" style="min-width:100%;height:1000px;"></iframe>
+                    <iframe src="http://forum.vnow.id:8004" frameborder="0" id="myIframe" style="min-width:100%;height:1000px;"></iframe>
         </div>
     </div>
 
@@ -248,6 +249,8 @@
       <!--Start of subscribe functionality-->
       <script>
         $(document).ready(function() {
+          var heightWindow =  $(window).height();
+          $("#myIframe").height(heightWindow);
           $("#subscribeForm, #footerSubscribeForm").on('submit', function(e) {
             // console.log($(this).attr('id'));
 
