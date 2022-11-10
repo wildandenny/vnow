@@ -147,6 +147,7 @@
         </div>
     </div> --}}
 
+    
     <div class="row forum-section" >
         <div class="col-sm-12">
             <iframe src="https://vnow.upjyco.com/forum/public" frameborder="0" id="myIframe" style="min-width:100%;height:1000px;"></iframe>
@@ -249,7 +250,8 @@
       <script>
         $(document).ready(function() {
           var heightWindow =  $(window).height();
-          $("#myIframe").height(heightWindow);
+          var headerArea = $(".header-area").height() 
+          $("#myIframe").height(heightWindow - headerArea);
           $("#subscribeForm, #footerSubscribeForm").on('submit', function(e) {
             // console.log($(this).attr('id'));
 
