@@ -117,10 +117,12 @@
       <!--End of Appzi script-->
 
       <script>
-        function resizeIframe(obj) {
-          obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-        }
+        // function resizeIframe(obj) {
+        //   obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        // }
       </script>
+
+      
    </head>
 
 
@@ -135,15 +137,24 @@
 
 
 
-    <div class="row forum-section" >
+    {{-- <div class="row forum-section" >
         <div class="col-sm-12">
             <div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://vnow.upjyco.com/forum/public" class="embed-responsive-item" frameborder="0" scrolling="auto" onload="resizeIframe(this)"  src="" allowfullscreen=""></iframe>
+                <div class="embed-responsive embed-responsive-16by9" style="overflow:auto">
+                    <iframe src="http://forum.vnow.id:8004" class="embed-responsive-item" frameborder="0" scrolling="auto"   src="" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
+    </div> --}}
+
+    <div class="row forum-section" >
+        <div class="col-sm-12">
+                <iframe src="https://vnow.upjyco.com/forum/public" frameborder="0" id="myIframe" style="min-width:100%;height:1000px;"></iframe>
+        </div>
     </div>
+
+  
+
 
 
 
@@ -285,6 +296,7 @@
       {!! $bs->addthis_script !!}
       @endif
       <!--End of AddThis script-->
+      
    </body>
 </html>
 
