@@ -38,6 +38,7 @@
                 throw e;
             }
         </script>
+        <script src="/../assets/js/iframeResizer.contentWindow.min.js"></script>
 
         {!! $foot !!}
     </body>
