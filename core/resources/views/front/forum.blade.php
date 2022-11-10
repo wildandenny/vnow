@@ -139,7 +139,7 @@
         <div class="col-sm-12">
             <div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://forum-vnow.upjyco.com/forum" class="embed-responsive-item" frameborder="0" scrolling="auto" onload="resizeIframe(this)"  src="" allowfullscreen=""></iframe>
+                    <iframe src="https://forum-vnow.upjyco.com" class="embed-responsive-item" frameborder="0" scrolling="auto" onload="resizeIframe(this)"  src="" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
