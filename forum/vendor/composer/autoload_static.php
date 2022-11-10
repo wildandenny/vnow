@@ -23,13 +23,13 @@ class ComposerStaticInit1ee9d44b26e1cda677d63b20e15df817
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
-        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
-        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '07d7f1a47144818725fd8d91a907ac57' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/create_uploaded_file.php',
         'da94ac5d3ca7d2dbab84ce561ce72bfd' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_headers_from_sapi.php',
         '3d97c8dcdfba8cb85d3b34f116bb248b' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_method_from_sapi.php',
@@ -69,6 +69,10 @@ class ComposerStaticInit1ee9d44b26e1cda677d63b20e15df817
             's9e\\TextFormatter\\' => 18,
             's9e\\SweetDOM\\' => 13,
             's9e\\RegexpBuilder\\' => 18,
+        ),
+        'e' => 
+        array (
+            'enshrined\\svgSanitize\\' => 22,
         ),
         'a' => 
         array (
@@ -116,6 +120,7 @@ class ComposerStaticInit1ee9d44b26e1cda677d63b20e15df817
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
+            'SoftCreatR\\MimeDetector\\' => 24,
         ),
         'R' => 
         array (
@@ -188,6 +193,7 @@ class ComposerStaticInit1ee9d44b26e1cda677d63b20e15df817
         'F' => 
         array (
             'Franzl\\Middleware\\Whoops\\' => 25,
+            'FoF\\Upload\\' => 11,
             'Flarum\\Tags\\' => 12,
             'Flarum\\Suspend\\' => 15,
             'Flarum\\Subscriptions\\' => 21,
@@ -246,6 +252,10 @@ class ComposerStaticInit1ee9d44b26e1cda677d63b20e15df817
         's9e\\RegexpBuilder\\' => 
         array (
             0 => __DIR__ . '/..' . '/s9e/regexp-builder/src',
+        ),
+        'enshrined\\svgSanitize\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/enshrined/svg-sanitize/src',
         ),
         'axy\\sourcemap\\' => 
         array (
@@ -386,6 +396,10 @@ class ComposerStaticInit1ee9d44b26e1cda677d63b20e15df817
         'Symfony\\Component\\Config\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/config',
+        ),
+        'SoftCreatR\\MimeDetector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/softcreatr/php-mime-detector/src/SoftCreatR/MimeDetector',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -584,6 +598,10 @@ class ComposerStaticInit1ee9d44b26e1cda677d63b20e15df817
         'Franzl\\Middleware\\Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/franzl/whoops-middleware/src',
+        ),
+        'FoF\\Upload\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/upload/src',
         ),
         'Flarum\\Tags\\' => 
         array (

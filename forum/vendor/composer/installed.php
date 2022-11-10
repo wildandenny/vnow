@@ -127,6 +127,15 @@
             'reference' => '0dbf5d78455d4d6a41d186da50adc1122ec066f4',
             'dev_requirement' => false,
         ),
+        'enshrined/svg-sanitize' => array(
+            'pretty_version' => '0.15.4',
+            'version' => '0.15.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../enshrined/svg-sanitize',
+            'aliases' => array(),
+            'reference' => 'e50b83a2f1f296ca61394fe88fbfe3e896a84cf4',
+            'dev_requirement' => false,
+        ),
         'fig/http-message-util' => array(
             'pretty_version' => '1.1.5',
             'version' => '1.1.5.0',
@@ -144,6 +153,12 @@
             'aliases' => array(),
             'reference' => 'f7948baaa0330277c729714910336383286305da',
             'dev_requirement' => false,
+        ),
+        'flagrow/upload' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
         ),
         'flarum/approval' => array(
             'pretty_version' => 'v1.5.0',
@@ -305,6 +320,15 @@
             'install_path' => __DIR__ . '/../flarum/tags',
             'aliases' => array(),
             'reference' => 'ddb5f2fd849a0ccae127583d620adbc969182215',
+            'dev_requirement' => false,
+        ),
+        'fof/upload' => array(
+            'pretty_version' => '1.2.3',
+            'version' => '1.2.3.0',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/upload',
+            'aliases' => array(),
+            'reference' => 'd1f0e4bae11ce12f4d1f6482b380e48f345a8dd3',
             'dev_requirement' => false,
         ),
         'franzl/whoops-middleware' => array(
@@ -936,6 +960,15 @@
             'install_path' => __DIR__ . '/../s9e/text-formatter',
             'aliases' => array(),
             'reference' => '7f07e259b626d8c8910eb15ff4ed6d78af951de1',
+            'dev_requirement' => false,
+        ),
+        'softcreatr/php-mime-detector' => array(
+            'pretty_version' => '3.2.1',
+            'version' => '3.2.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../softcreatr/php-mime-detector',
+            'aliases' => array(),
+            'reference' => 'bd26abae1659901617ed51150063c310e089eef9',
             'dev_requirement' => false,
         ),
         'swiftmailer/swiftmailer' => array(
