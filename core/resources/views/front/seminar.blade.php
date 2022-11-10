@@ -13,9 +13,9 @@
 @section('meta-keywords', "$be->blogs_meta_keywords")
 @section('meta-description', "$be->blogs_meta_description")
 
-@section('breadcrumb-title', "Activity")
-@section('breadcrumb-subtitle', "Our Seminar")
-@section('breadcrumb-link', "Our Seminar")
+@section('breadcrumb-title', "Aktivitas Kami")
+@section('breadcrumb-subtitle', "Seminar")
+@section('breadcrumb-link', "Seminar")
 
 @section('content')
 
@@ -33,7 +33,7 @@
                            <input name="category" type="hidden" value="{{request()->input('category')}}">
                            <input name="month" type="hidden" value="{{request()->input('month')}}">
                            <input name="year" type="hidden" value="{{request()->input('year')}}">
-                           <input name="term" type="text" placeholder="Search Seminar" value="{{request()->input('term')}}">
+                           <input name="term" type="text" placeholder="Cari Seminar" value="{{request()->input('term')}}">
                            <button type="submit"><i class="fa fa-search"></i></button>
                         </div>
                      </form>

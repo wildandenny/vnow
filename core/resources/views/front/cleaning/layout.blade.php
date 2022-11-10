@@ -199,7 +199,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-wedget">
                         <h4>{{__('Newsletter')}}</h4>
-                        <p>{{convertUtf8($bs->newsletter_text)}}</p>
+                        <p>Berlangganan Buletin Voice Now dan Info Terbaru Tentang Voice Now</p>
                         <form id="footerSubscribeForm" action="{{route('front.subscribe')}}" method="post">
                             <input type="email" name="email" required placeholder="{{__('Enter Email Address')}}">
                             <button type="submit" class="main-btn footer-form-btn">{{__('Subscribe')}}</button>
