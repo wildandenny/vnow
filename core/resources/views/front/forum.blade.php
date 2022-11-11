@@ -150,7 +150,7 @@
     
     <div class="row forum-section" >
         <div class="col-sm-12">
-            <iframe src="https://vnow.upjyco.com/forum/public" frameborder="0" id="myIframe" style="min-width:100%;height:1000px;"></iframe>
+                    <iframe src="http://app.vnow.id:8005/forum/public" frameborder="0" id="myIframe" style="min-width:100%;height:1000px;"></iframe>
         </div>
     </div>
 

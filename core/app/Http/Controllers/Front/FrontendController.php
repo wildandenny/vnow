@@ -555,21 +555,30 @@ class FrontendController extends Controller
             $data['category'] = Bcategory::where('slug', $category)->firstOrFail();
             $catid = $data['category']->id;
         }
+        
         $term = $request->term;
         $tag = $request->tag;
         $month = $request->month;
         $year = $request->year;
         $data['archives'] = Archive::orderBy('id', 'DESC')->get();
-        $data['bcats'] = Bcategory::where('language_id', $lang_id)->where('status', 1)->orderBy('serial_number', 'ASC')->get();
+        $data['bcats'] = Bcategory::where('language_id', $lang_id)->where('status', 1)->where('type', 0)->orderBy('serial_number', 'ASC')->get();
         if (!empty($month) && !empty($year)) {
             $archive = true;
         } else {
             $archive = false;
         }
 
+        $categories = $data['bcats'] ;
+        $category_id = [];
+        foreach($categories as $index => $value){
+            $category_id[$index] = $value->id;
+        }
+       
+
         $data['blogs'] = Blog::when($catid, function ($query, $catid) {
             return $query->where('bcategory_id', $catid);
         })
+            ->whereIn('bcategory_id',$category_id)
             ->when($term, function ($query, $term) {
                 return $query->where('title', 'like', '%' . $term . '%');
             })

@@ -7,8 +7,8 @@
 @section('meta-keywords', "$be->gallery_meta_keywords")
 @section('meta-description', "$be->gallery_meta_description")
 
-@section('breadcrumb-title', $bs->gallery_title)
-@section('breadcrumb-subtitle', $bs->gallery_subtitle)
+@section('breadcrumb-title', "Galeri")
+@section('breadcrumb-subtitle', "Galeri Kami")
 @section('breadcrumb-link', __('GALLERY'))
 
 @section('content')

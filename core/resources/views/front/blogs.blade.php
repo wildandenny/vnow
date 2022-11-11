@@ -13,8 +13,8 @@
 @section('meta-keywords', "$be->blogs_meta_keywords")
 @section('meta-description', "$be->blogs_meta_description")
 
-@section('breadcrumb-title', convertUtf8($bs->blog_title))
-@section('breadcrumb-subtitle', convertUtf8($bs->blog_subtitle))
+@section('breadcrumb-title', "Blog")
+@section('breadcrumb-subtitle', "Blog & Berita Terbaru Kami")
 @section('breadcrumb-link', __('Latest Blogs'))
 
 @section('content')

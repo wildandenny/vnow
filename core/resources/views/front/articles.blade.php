@@ -4,8 +4,8 @@
   - {{__('All Articles')}}
 @endsection
 
-@section('breadcrumb-title', convertUtf8($bex->knowledgebase_title))
-@section('breadcrumb-subtitle', convertUtf8($bse->knowledgebase_subtitle))
+@section('breadcrumb-title', "Edukasi")
+@section('breadcrumb-subtitle', "Materi Pembelajaran")
 @section('breadcrumb-link', __('Knowledgebase'))
 
 @section('content')

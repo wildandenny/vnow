@@ -48,7 +48,7 @@
 @section('meta-keywords', "$event->meta_keywords")
 @section('meta-description', "$event->meta_description")
 
-@section('breadcrumb-title', $bs->event_details_title)
+@section('breadcrumb-title', "Detil Event")
 @section('breadcrumb-subtitle', strlen($event->title) > 30 ? mb_substr($event->title,0,30,'utf-8') . '...' : $event->title)
 @section('breadcrumb-link', __('Event Details'))
 
@@ -109,7 +109,7 @@
                                     <p>{{$event->venue_location}}</p>
                                 </div>
 
-                               @if($event->available_tickets > 0)
+                               {{-- @if($event->available_tickets > 0)
                                     <ul class="mb-20" style="display: flex">
                                         <li><input type="number" id="tickets" min="1" max="{{$event->available_tickets}}">
                                         </li>
@@ -124,7 +124,7 @@
                                     <a href="javascript:void(0)" class="main-btn" id="addToCart">{{__('Add To Cart')}}</a>
                                 @else
                                     <div>{{__('No tickets are available')}}</div>
-                                @endif
+                                @endif --}}
                             </div>
                             @php
                                 if(Auth::check()) {
@@ -230,7 +230,7 @@
                         <div class="discription-tabs">
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#description">{{__('Details')}}</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#description">DESKRIPSI EVENT</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#organizer">{{__('Organizer')}}</a>
@@ -239,7 +239,7 @@
                                     <a class="nav-link" data-toggle="tab" href="#vanue">{{__('Venue')}}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#discuss">Discuss</a>
+                                    <a class="nav-link" data-toggle="tab" href="#discuss">Diskusi</a>
                                 </li>
                             </ul>
                         </div>

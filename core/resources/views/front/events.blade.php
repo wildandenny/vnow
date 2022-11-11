@@ -12,7 +12,7 @@
 @section('meta-description', "$be->events_meta_description")
 
 @section('breadcrumb-title', convertUtf8($bs->event_title))
-@section('breadcrumb-subtitle', convertUtf8($bs->event_subtitle))
+@section('breadcrumb-subtitle', "Ikuti Event Kami")
 @section('breadcrumb-link', __('Events'))
 
 @section('content')
