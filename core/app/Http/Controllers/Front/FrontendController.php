@@ -575,22 +575,44 @@ class FrontendController extends Controller
         }
        
 
-        $data['blogs'] = Blog::when($catid, function ($query, $catid) {
-            return $query->where('bcategory_id', $catid);
-        })
-            ->whereIn('bcategory_id',$category_id)
-            ->when($term, function ($query, $term) {
-                return $query->where('title', 'like', '%' . $term . '%');
+        if($catid == 44 ||$catid == 45||$catid == 46||$catid == 47){
+            $data['blogs'] = Blog::when($catid, function ($query, $catid) {
+                return $query->where('bcategory_id', $catid);
             })
-            ->when($tag, function ($query, $tag) {
-                return $query->where('tags', 'like', '%' . $tag . '%');
+                ->when($term, function ($query, $term) {
+                    return $query->where('title', 'like', '%' . $term . '%');
+                })
+                ->when($tag, function ($query, $tag) {
+                    return $query->where('tags', 'like', '%' . $tag . '%');
+                })
+                ->when($archive, function ($query) use ($month, $year) {
+                    return $query->whereMonth('created_at', $month)->whereYear('created_at', $year);
+                })
+                ->when($currentLang, function ($query, $currentLang) {
+                    return $query->where('language_id', $currentLang->id);
+                })->orderBy('serial_number', 'ASC')->paginate(6);
+        }else{
+
+            
+            $data['blogs'] = Blog::when($catid, function ($query, $catid) {
+                return $query->where('bcategory_id', $catid);
             })
-            ->when($archive, function ($query) use ($month, $year) {
-                return $query->whereMonth('created_at', $month)->whereYear('created_at', $year);
-            })
-            ->when($currentLang, function ($query, $currentLang) {
-                return $query->where('language_id', $currentLang->id);
-            })->orderBy('serial_number', 'ASC')->paginate(6);
+                ->whereIn('bcategory_id',$category_id)
+                ->when($term, function ($query, $term) {
+                    return $query->where('title', 'like', '%' . $term . '%');
+                })
+                ->when($tag, function ($query, $tag) {
+                    return $query->where('tags', 'like', '%' . $tag . '%');
+                })
+                ->when($archive, function ($query) use ($month, $year) {
+                    return $query->whereMonth('created_at', $month)->whereYear('created_at', $year);
+                })
+                ->when($currentLang, function ($query, $currentLang) {
+                    return $query->where('language_id', $currentLang->id);
+                })->orderBy('serial_number', 'ASC')->paginate(6);
+        }
+        
+
 
         $version = $be->theme_version;
 

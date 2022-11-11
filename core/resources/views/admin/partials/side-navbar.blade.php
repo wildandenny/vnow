@@ -97,11 +97,11 @@ $data = \App\BasicExtra::first();
                 @elseif(request()->path() == 'admin/home-page') show
                 @endif" id="themeHome">
                 <ul class="nav nav-collapse">
-                    <li class="@if(request()->path() == 'admin/home-settings') active @endif">
+                    {{-- <li class="@if(request()->path() == 'admin/home-settings') active @endif">
                         <a href="{{route('admin.homeSettings')}}">
                             <span class="sub-item">Settings</span>
                         </a>
-                    </li>
+                    </li> --}}
                     @if ($bex->home_page_pagebuilder == 1)
 
                     <li class="@if(request()->path() == 'admin/home-page') active @endif">
@@ -115,6 +115,48 @@ $data = \App\BasicExtra::first();
         </li>
         @endif
 
+        
+
+{{-- Dynamic Pages --}}
+@if (empty($admin->role) || (!empty($permissions) && in_array('Pages', $permissions)))
+<li class="nav-item
+@if(request()->path() == 'admin/page/create') active
+@elseif(request()->path() == 'admin/page/settings') active
+@elseif(request()->path() == 'admin/pages') active
+@elseif(request()->is('admin/page/*/edit')) active
+@endif">
+<a data-toggle="collapse" href="#pages">
+    <i class="la flaticon-file"></i>
+    <p>Custom Pages <span class="badge badge-danger p-1 sidenav-badge">Pagebuilder</span></p>
+    <span class="caret"></span>
+</a>
+<div class="collapse
+@if(request()->path() == 'admin/page/create') show
+@elseif(request()->path() == 'admin/page/settings') show
+@elseif(request()->path() == 'admin/pages') show
+@elseif(request()->is('admin/page/*/edit')) show
+@endif" id="pages">
+<ul class="nav nav-collapse">
+    <li class="@if(request()->path() == 'admin/page/settings') active @endif">
+        <a href="{{route('admin.page.settings')}}">
+            <span class="sub-item">Settings</span>
+        </a>
+    </li>
+    <li class="@if(request()->path() == 'admin/page/create') active @endif">
+        <a href="{{route('admin.page.create') . '?language=' . $default->code}}">
+            <span class="sub-item">Create Page</span>
+        </a>
+    </li>
+    <li class="@if(request()->path() == 'admin/pages') active @endif">
+        <a href="{{route('admin.page.index') . '?language=' . $default->code}}">
+            <span class="sub-item">Pages</span>
+        </a>
+    </li>
+</ul>
+</div>
+</li>
+@endif
+
 
         @if (empty($admin->role) || (!empty($permissions) && in_array('Menu Builder', $permissions)))
         {{-- Menu Builder--}}
@@ -126,7 +168,7 @@ $data = \App\BasicExtra::first();
         @endif">
         <a data-toggle="collapse" href="#websiteMenu">
             <i class="fas fa-ellipsis-v"></i>
-            <p>Website Menu Builder</p>
+            <p>Menu</p>
             <span class="caret"></span>
         </a>
         <div class="collapse
@@ -166,48 +208,8 @@ $data = \App\BasicExtra::first();
 @endif
 
 
-@if (empty($admin->role) || (!empty($permissions) && in_array('Pages', $permissions)))
-{{-- Dynamic Pages --}}
-<li class="nav-item
-@if(request()->path() == 'admin/page/create') active
-@elseif(request()->path() == 'admin/page/settings') active
-@elseif(request()->path() == 'admin/pages') active
-@elseif(request()->is('admin/page/*/edit')) active
-@endif">
-<a data-toggle="collapse" href="#pages">
-    <i class="la flaticon-file"></i>
-    <p>Custom Pages <span class="badge badge-danger p-1 sidenav-badge">Pagebuilder</span></p>
-    <span class="caret"></span>
-</a>
-<div class="collapse
-@if(request()->path() == 'admin/page/create') show
-@elseif(request()->path() == 'admin/page/settings') show
-@elseif(request()->path() == 'admin/pages') show
-@elseif(request()->is('admin/page/*/edit')) show
-@endif" id="pages">
-<ul class="nav nav-collapse">
-    <li class="@if(request()->path() == 'admin/page/settings') active @endif">
-        <a href="{{route('admin.page.settings')}}">
-            <span class="sub-item">Settings</span>
-        </a>
-    </li>
-    <li class="@if(request()->path() == 'admin/page/create') active @endif">
-        <a href="{{route('admin.page.create') . '?language=' . $default->code}}">
-            <span class="sub-item">Create Page</span>
-        </a>
-    </li>
-    <li class="@if(request()->path() == 'admin/pages') active @endif">
-        <a href="{{route('admin.page.index') . '?language=' . $default->code}}">
-            <span class="sub-item">Pages</span>
-        </a>
-    </li>
-</ul>
-</div>
-</li>
-@endif
-
-@if (empty($admin->role) || (!empty($permissions) && in_array('Event Calendar', $permissions)))
 {{-- Event Calendar --}}
+{{-- @if (empty($admin->role) || (!empty($permissions) && in_array('Event Calendar', $permissions)))
 <li class="nav-item
 @if(request()->path() == 'admin/calendars') active
 @endif">
@@ -216,7 +218,7 @@ $data = \App\BasicExtra::first();
     <p>Event Calendar</p>
 </a>
 </li>
-@endif
+@endif --}}
 
 
 {{-- package --}}
@@ -630,8 +632,8 @@ $data = \App\BasicExtra::first();
 @endif --}}
 {{-- End Of product --}}
 
-@if (empty($admin->role) || (!empty($permissions) && in_array('Course Management', $permissions)))
 {{-- Courses --}}
+{{-- @if (empty($admin->role) || (!empty($permissions) && in_array('Course Management', $permissions)))
 <li class="nav-item
 @if(request()->path() == 'admin/course_categories') active
 @elseif(request()->path() == 'admin/course/settings') active
@@ -700,7 +702,7 @@ id="course"
 </ul>
 </div>
 </li>
-@endif
+@endif --}}
 
 
 
@@ -908,8 +910,8 @@ id="course"
 {{-- END OF Tickets --}}
 
 
-@if (empty($admin->role) || (!empty($permissions) && in_array('RSS Feeds', $permissions)))
 {{-- RSS --}}
+{{-- @if (empty($admin->role) || (!empty($permissions) && in_array('RSS Feeds', $permissions)))
 <li class="nav-item
 @if(request()->path() == 'admin/rss/create') active
 @elseif(request()->path() == 'admin/rss/feeds') active
@@ -946,110 +948,7 @@ id="course"
 </ul>
 </div>
 </li>
-@endif
-
-
-{{-- Users Management --}}
-@if (empty($admin->role) || (!empty($permissions) && in_array('Users Management', $permissions)))
-<li class="nav-item
-@if(request()->routeIs('admin.register.user')) active
-@elseif(request()->routeIs('register.user.view')) active
-@elseif(request()->routeIs('register.user.changePass')) active
-
-@elseif(request()->path() == 'admin/pushnotification/settings') active
-@elseif(request()->path() == 'admin/pushnotification/send') active
-
-@elseif(request()->path() == 'admin/subscribers') active
-@elseif(request()->path() == 'admin/mailsubscriber') active
-@endif">
-<a data-toggle="collapse" href="#usersManagement">
-    <i class="la flaticon-users"></i>
-    <p>Users Management</p>
-    <span class="caret"></span>
-</a>
-<div class="collapse
-@if(request()->routeIs('admin.register.user')) show
-@elseif(request()->routeIs('register.user.view')) show
-@elseif(request()->routeIs('register.user.changePass')) show
-
-@elseif(request()->path() == 'admin/pushnotification/settings') show
-@elseif(request()->path() == 'admin/pushnotification/send') show
-
-@elseif(request()->path() == 'admin/subscribers') show
-@elseif(request()->path() == 'admin/mailsubscriber') show
-@endif" id="usersManagement">
-<ul class="nav nav-collapse">
-
-    {{-- Registered Users --}}
-    <li class="
-    @if(request()->routeIs('admin.register.user')) active
-    @elseif(request()->routeIs('register.user.view')) active
-    @elseif(request()->routeIs('register.user.changePass')) active
-    @endif">
-    <a href="{{route('admin.register.user')}}">
-        <span class="sub-item">Registered Users</span>
-    </a>
-</li>
-
-{{-- Push Notification --}}
-<li class="
-@if(request()->path() == 'admin/pushnotification/settings') selected
-@elseif(request()->path() == 'admin/pushnotification/send') selected
-@endif">
-<a data-toggle="collapse" href="#pushNotification">
-    <span class="sub-item">Push Notification</span>
-    <span class="caret"></span>
-</a>
-<div class="collapse
-@if(request()->path() == 'admin/pushnotification/settings') show
-@elseif(request()->path() == 'admin/pushnotification/send') show
-@endif" id="pushNotification">
-<ul class="nav nav-collapse subnav">
-    <li class="@if(request()->path() == 'admin/pushnotification/settings') active @endif">
-        <a href="{{route('admin.pushnotification.settings')}}">
-            <span class="sub-item">Settings</span>
-        </a>
-    </li>
-    <li class="@if(request()->path() == 'admin/pushnotification/send') active @endif">
-        <a href="{{route('admin.pushnotification.send')}}">
-            <span class="sub-item">Send Notification</span>
-        </a>
-    </li>
-</ul>
-</div>
-</li>
-
-{{-- Subscribers --}}
-<li class="
-@if(request()->path() == 'admin/subscribers') selected
-@elseif(request()->path() == 'admin/mailsubscriber') selected
-@endif">
-<a data-toggle="collapse" href="#subscribers">
-    <span class="sub-item">Subscribers</span>
-    <span class="caret"></span>
-</a>
-<div class="collapse
-@if(request()->path() == 'admin/subscribers') show
-@elseif(request()->path() == 'admin/mailsubscriber') show
-@endif" id="subscribers">
-<ul class="nav nav-collapse subnav">
-    <li class="@if(request()->path() == 'admin/subscribers') active @endif">
-        <a href="{{route('admin.subscriber.index')}}">
-            <span class="sub-item">Subscribers</span>
-        </a>
-    </li>
-    <li class="@if(request()->path() == 'admin/mailsubscriber') active @endif">
-        <a href="{{route('admin.mailsubscriber')}}">
-            <span class="sub-item">Mail to Subscribers</span>
-        </a>
-    </li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-@endif
+@endif --}}
 
 
 {{-- Announcement Popup--}}
@@ -1086,6 +985,151 @@ id="course"
             <span class="sub-item">Popups</span>
         </a>
     </li>
+</ul>
+</div>
+</li>
+@endif
+
+{{-- Users Management --}}
+@if (empty($admin->role) || (!empty($permissions) && in_array('Users Management', $permissions)))
+<li class="nav-item
+@if(request()->routeIs('admin.register.user')) active
+@elseif(request()->routeIs('register.user.view')) active
+@elseif(request()->routeIs('register.user.changePass')) active
+
+@elseif(request()->path() == 'admin/pushnotification/settings') active
+@elseif(request()->path() == 'admin/pushnotification/send') active
+
+@elseif(request()->path() == 'admin/subscribers') active
+@elseif(request()->path() == 'admin/mailsubscriber') active
+@endif">
+<a data-toggle="collapse" href="#usersManagement">
+    <i class="la flaticon-users"></i>
+    <p>Users Management</p>
+    <span class="caret"></span>
+</a>
+<div class="collapse
+@if(request()->routeIs('admin.register.user')) show
+@elseif(request()->routeIs('register.user.view')) show
+@elseif(request()->routeIs('register.user.changePass')) show
+
+@elseif(request()->path() == 'admin/pushnotification/settings') show
+@elseif(request()->path() == 'admin/pushnotification/send') show
+
+@elseif(request()->path() == 'admin/subscribers') show
+@elseif(request()->path() == 'admin/mailsubscriber') show
+@endif" id="usersManagement">
+<ul class="nav nav-collapse">
+
+    {{-- Registered Users --}}
+    {{-- <li class="
+    @if(request()->routeIs('admin.register.user')) active
+    @elseif(request()->routeIs('register.user.view')) active
+    @elseif(request()->routeIs('register.user.changePass')) active
+    @endif">
+    <a href="{{route('admin.register.user')}}">
+        <span class="sub-item">Registered Users</span>
+    </a>
+</li> --}}
+
+{{-- Push Notification --}}
+{{-- <li class="
+@if(request()->path() == 'admin/pushnotification/settings') selected
+@elseif(request()->path() == 'admin/pushnotification/send') selected
+@endif">
+<a data-toggle="collapse" href="#pushNotification">
+    <span class="sub-item">Push Notification</span>
+    <span class="caret"></span>
+</a>
+<div class="collapse
+@if(request()->path() == 'admin/pushnotification/settings') show
+@elseif(request()->path() == 'admin/pushnotification/send') show
+@endif" id="pushNotification">
+<ul class="nav nav-collapse subnav">
+    <li class="@if(request()->path() == 'admin/pushnotification/settings') active @endif">
+        <a href="{{route('admin.pushnotification.settings')}}">
+            <span class="sub-item">Settings</span>
+        </a>
+    </li>
+    <li class="@if(request()->path() == 'admin/pushnotification/send') active @endif">
+        <a href="{{route('admin.pushnotification.send')}}">
+            <span class="sub-item">Send Notification</span>
+        </a>
+    </li>
+</ul>
+</div>
+</li> --}}
+
+{{-- Subscribers --}}
+<li class="
+@if(request()->path() == 'admin/subscribers') selected
+@elseif(request()->path() == 'admin/mailsubscriber') selected
+@endif">
+<a data-toggle="collapse" href="#subscribers">
+    <span class="sub-item">Subscribers</span>
+    <span class="caret"></span>
+</a>
+<div class="collapse
+@if(request()->path() == 'admin/subscribers') show
+@elseif(request()->path() == 'admin/mailsubscriber') show
+@endif" id="subscribers">
+<ul class="nav nav-collapse subnav">
+    <li class="@if(request()->path() == 'admin/subscribers') active @endif">
+        <a href="{{route('admin.subscriber.index')}}">
+            <span class="sub-item">Subscribers</span>
+        </a>
+    </li>
+    <li class="@if(request()->path() == 'admin/mailsubscriber') active @endif">
+        <a href="{{route('admin.mailsubscriber')}}">
+            <span class="sub-item">Mail to Subscribers</span>
+        </a>
+    </li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+@endif
+
+
+
+@if (empty($admin->role) || (!empty($permissions) && in_array('Admins Management', $permissions)))
+{{-- Admins Management --}}
+<li class="nav-item
+@if(request()->path() == 'admin/roles') active
+@elseif(request()->is('admin/role/*/permissions/manage')) active
+@elseif(request()->path() == 'admin/users') active
+@elseif(request()->is('admin/user/*/edit')) active
+@endif">
+<a data-toggle="collapse" href="#adminsManagement">
+    <i class="fas fa-users-cog"></i>
+    <p>Admins Management</p>
+    <span class="caret"></span>
+</a>
+<div class="collapse
+@if(request()->path() == 'admin/roles') show
+@elseif(request()->is('admin/role/*/permissions/manage')) show
+@elseif(request()->path() == 'admin/users') show
+@elseif(request()->is('admin/user/*/edit')) show
+@endif" id="adminsManagement">
+<ul class="nav nav-collapse">
+    <li class="
+    @if(request()->path() == 'admin/roles') active
+    @elseif(request()->is('admin/role/*/permissions/manage')) active
+    @endif">
+    <a href="{{route('admin.role.index')}}">
+        <span class="sub-item">Role Management</span>
+    </a>
+</li>
+<li class="
+@if(request()->path() == 'admin/users') active
+@elseif(request()->is('admin/user/*/edit')) active
+@endif">
+<a href="{{route('admin.user.index')}}">
+    <span class="sub-item">Admins</span>
+</a>
+</li>
 </ul>
 </div>
 </li>
@@ -1199,11 +1243,11 @@ id="course"
             <span class="sub-item">Preloader</span>
         </a>
     </li>
-    <li class="@if(request()->routeIs('admin.featuresettings')) active @endif">
+    {{-- <li class="@if(request()->routeIs('admin.featuresettings')) active @endif">
         <a href="{{route('admin.featuresettings') . '?language=' . $default->code}}">
             <span class="sub-item">Preferences</span>
         </a>
-    </li>
+    </li> --}}
     <li class="@if(request()->path() == 'admin/support') active @endif">
         <a href="{{route('admin.support') . '?language=' . $default->code}}">
             <span class="sub-item">Support Informations</span>
@@ -1318,58 +1362,17 @@ id="course"
 @endif
 
 
-@if (empty($admin->role) || (!empty($permissions) && in_array('Admins Management', $permissions)))
-{{-- Admins Management --}}
-<li class="nav-item
-@if(request()->path() == 'admin/roles') active
-@elseif(request()->is('admin/role/*/permissions/manage')) active
-@elseif(request()->path() == 'admin/users') active
-@elseif(request()->is('admin/user/*/edit')) active
-@endif">
-<a data-toggle="collapse" href="#adminsManagement">
-    <i class="fas fa-users-cog"></i>
-    <p>Admins Management</p>
-    <span class="caret"></span>
-</a>
-<div class="collapse
-@if(request()->path() == 'admin/roles') show
-@elseif(request()->is('admin/role/*/permissions/manage')) show
-@elseif(request()->path() == 'admin/users') show
-@elseif(request()->is('admin/user/*/edit')) show
-@endif" id="adminsManagement">
-<ul class="nav nav-collapse">
-    <li class="
-    @if(request()->path() == 'admin/roles') active
-    @elseif(request()->is('admin/role/*/permissions/manage')) active
-    @endif">
-    <a href="{{route('admin.role.index')}}">
-        <span class="sub-item">Role Management</span>
-    </a>
-</li>
-<li class="
-@if(request()->path() == 'admin/users') active
-@elseif(request()->is('admin/user/*/edit')) active
-@endif">
-<a href="{{route('admin.user.index')}}">
-    <span class="sub-item">Admins</span>
-</a>
-</li>
-</ul>
-</div>
-</li>
-@endif
 
 
-
-@if (empty($admin->role) || (!empty($permissions) && in_array('Client Feedbacks', $permissions)))
 {{-- Client Feedbacks --}}
+{{-- @if (empty($admin->role) || (!empty($permissions) && in_array('Client Feedbacks', $permissions)))
 <li class="nav-item @if(request()->path() == 'admin/feedbacks') active @endif">
     <a href="{{route('admin.client_feedbacks')}}">
         <i class="fas fa-pen-fancy"></i>
         <p>Client Feedbacks</p>
     </a>
 </li>
-@endif
+@endif --}}
 </ul>
 </div>
 </div>

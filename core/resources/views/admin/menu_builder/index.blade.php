@@ -63,7 +63,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
             </div>
             <div class="card-body pt-5 pb-5">
                 <div class="row no-gutters">
-                    <div class="col-lg-4">
+                    {{-- <div class="col-lg-4">
                         <div class="card border-primary mb-3">
                             <div class="card-header bg-primary text-white">Pre-built Menus</div>
                             <div class="card-body">
@@ -187,7 +187,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-lg-8">
                         <div class="card border-primary mb-3">
                             <div class="card-header">Add / Edit Menu</div>

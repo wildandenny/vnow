@@ -235,22 +235,22 @@
                     </ul>
                     </div>
                     </li>
-                    <li class="
+                    {{-- <li class="
                     @if(request()->path() == 'admin/features') active
                     @elseif(request()->is('admin/feature/*/edit')) active
                     @endif">
                     <a href="{{route('admin.feature.index') . '?language=' . $default->code}}">
                         <span class="sub-item">Features</span>
                     </a>
-                    </li>
+                    </li> --}}
 
                     {{-- @if ($bex->home_page_pagebuilder == 0) --}}
 
-                    <li class="@if(request()->path() == 'admin/introsection') active @endif">
+                    {{-- <li class="@if(request()->path() == 'admin/introsection') active @endif">
                         <a href="{{route('admin.introsection.index') . '?language=' . $default->code}}">
                             <span class="sub-item">Intro Section</span>
                         </a>
-                    </li>
+                    </li> --}}
                     {{-- @endif --}}
 
                     @if ($bex->home_page_pagebuilder == 0)
@@ -261,14 +261,14 @@
                     </li>
                     @endif
 
-                    <li class="
+                    {{-- <li class="
                     @if(request()->path() == 'admin/approach') active
                     @elseif(request()->is('admin/approach/*/pointedit')) active
                     @endif">
                     <a href="{{route('admin.approach.index') . '?language=' . $default->code}}">
                         <span class="sub-item">Approach Section</span>
                     </a>
-                    </li>
+                    </li> --}}
                     <li class="
                     @if(request()->path() == 'admin/statistics') active
                     @elseif(request()->is('admin/statistics/*/edit')) active
@@ -382,7 +382,7 @@
             </li>
 
             {{-- Service Management --}}
-            <li class="
+            {{-- <li class="
             @if(request()->path() == 'admin/scategorys') selected
             @elseif(request()->is('admin/service/settings')) selected
             @elseif(request()->is('admin/scategory/*/edit')) selected
@@ -428,11 +428,11 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> --}}
 
 
             {{-- Portfolio Management --}}
-            <li class="
+            {{-- <li class="
             @if(request()->path() == 'admin/portfolios') selected
             @elseif(request()->path() == 'admin/portfolio/create') selected
             @elseif(request()->is('admin/portfolio/*/edit')) selected
@@ -464,7 +464,7 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> --}}
 
             {{-- Blogs Management --}}
             <li class="
@@ -554,7 +554,7 @@
 
 
             {{-- FAQ Management --}}
-            <li class="
+            {{-- <li class="
             @if(request()->path() == 'admin/faq/settings') selected
             @elseif(request()->path() == 'admin/faq/categories') selected
             @elseif(request()->path() == 'admin/faqs') selected
@@ -588,7 +588,7 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> --}}
 
 
             {{-- Career Page --}}
