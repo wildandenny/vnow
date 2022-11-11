@@ -47,7 +47,7 @@
                 @if (count($blogs) == 0)
                   <div class="col-md-12">
                     <div class="bg-light py-5">
-                      <h3 class="text-center">{{__('NO TRAINING FOUND')}}</h3>
+                      <h3 class="text-center">Tidak ada aktivitas pelatihan ditemukan</h3>
                     </div>
                   </div>
                 @else
