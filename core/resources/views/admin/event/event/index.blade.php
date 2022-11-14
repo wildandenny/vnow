@@ -153,7 +153,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
                @csrf
 
                 {{-- Video Part --}}
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="">Video ** </label>
                     <br>
                     <div class="video-preview" id="videoPreview2">
@@ -171,7 +171,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
                     <p class="text-warning mb-0">MP4 video is allowed</p>
                     <p class="em text-danger mb-0" id="errvideo"></p>
 
-                </div>
+                </div> --}}
                 {{-- START: slider Part --}}
                 <div class="row">
                     <div class="col-12">
@@ -232,7 +232,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
                     <input type="time" class="form-control ltr" name="time" value="" placeholder="Enter Event Time" required>
                     <p id="errtime" class="mb-0 text-danger em"></p>
                 </div>
-               <div class="form-group">
+               {{-- <div class="form-group">
                   <label for="">Cost (in {{$abx->base_currency_text}}) **</label>
                   <input type="number" class="form-control ltr" name="cost" value="" placeholder="Enter Ticket Cost" required>
                   <p id="errcost" class="mb-0 text-danger em"></p>
@@ -241,7 +241,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
                     <label for="">Available Tickets **</label>
                     <input type="number" class="form-control ltr" name="available_tickets" value="" placeholder="Enter Available Tickets Number" required>
                     <p id="erravailable_tickets" class="mb-0 text-danger em"></p>
-                </div>
+                </div> --}}
                 <div class="form-group">
                     <label for="">Organizer **</label>
                     <input type="text" class="form-control ltr" name="organizer" value="" placeholder="Event Organizer" required>

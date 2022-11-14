@@ -82,14 +82,14 @@ class EventController extends Controller
             ],
             'date' => 'required',
             'time' => 'required',
-            'cost' => 'required',
-            'available_tickets' => 'required',
+            // 'cost' => 'required',
+            // 'available_tickets' => 'required',
             'organizer' => 'required',
             'venue' => 'required',
             'lang_id' => 'required',
             'cat_id' => 'required',
             'slider' => 'required',
-            'video' => 'required'
+            // 'video' => 'required'
         ];
         if ($request->filled('video')) {
             $rules['video'] = [
@@ -155,7 +155,7 @@ class EventController extends Controller
                 'slug' => $slug,
                 'image' => json_encode($images),
                 'content' => str_replace(url('/') . '/assets/front/img/', "{base_url}/assets/front/img/", $request->content),
-                'video' => $videoFile
+                // 'video' => $videoFile
             ]);
         Session::flash('success', 'Event added successfully!');
         return "success";
@@ -221,8 +221,8 @@ class EventController extends Controller
             ],
             'date' => 'required',
             'time' => 'required',
-            'cost' => 'required',
-            'available_tickets' => 'required',
+            // 'cost' => 'required',
+            // 'available_tickets' => 'required',
             'organizer' => 'required',
             'venue' => 'required',
             'cat_id' => 'required',
@@ -280,7 +280,7 @@ class EventController extends Controller
         $event->update($request->except('image', 'video', 'content') + [
                 'slug' => $slug,
                 'content' => str_replace(url('/') . '/assets/front/img/', "{base_url}/assets/front/img/", $request->content),
-                'video' => $videoFile
+                // 'video' => $videoFile
             ]);
         $event = Event::findOrFail($request->event_id);
 

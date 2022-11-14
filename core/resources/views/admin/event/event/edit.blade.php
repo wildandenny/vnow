@@ -118,7 +118,7 @@
                 <input type="hidden" name="event_id" value="{{$event->id}}">
                 <input type="hidden" name="lang_id" value="{{$event->lang_id}}">
                 {{-- Video Part --}}
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="">Video ** </label>
                     <br>
                     <div class="video-preview" id="videoPreview1">
@@ -147,7 +147,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 {{-- START: slider Part --}}
 
                 {{-- START: slider Part --}}
@@ -213,16 +213,16 @@
                       <input type="time" class="form-control ltr" name="time" value="{{\Carbon\Carbon::parse($event->time)->format('H:i:s')}}" placeholder="Enter Event Time">
                       <p id="errtime" class="mb-0 text-danger em"></p>
                   </div>
-                  <div class="form-group">
+                  {{-- <div class="form-group">
                       <label for="">Cost (in {{$abx->base_currency_text}}) **</label>
                       <input type="number" class="form-control ltr" name="cost" value="{{$event->cost}}" placeholder="Enter Ticket Cost">
                       <p id="errcost" class="mb-0 text-danger em"></p>
-                  </div>
-                <div class="form-group">
+                  </div> --}}
+                {{-- <div class="form-group">
                   <label for="">Available Tickets **</label>
                   <input type="number" class="form-control ltr" name="available_tickets" value="{{$event->available_tickets}}" placeholder="Enter Number of available tickets">
                   <p id="erravailable_tickets" class="mb-0 text-danger em"></p>
-                </div>
+                </div> --}}
                   <div class="form-group">
                       <label for="">Organizer</label>
                       <input type="text" class="form-control ltr" name="organizer" value="{{$event->organizer}}" placeholder="Event Organizer">

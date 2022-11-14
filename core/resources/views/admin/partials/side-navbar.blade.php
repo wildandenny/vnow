@@ -137,11 +137,11 @@ $data = \App\BasicExtra::first();
 @elseif(request()->is('admin/page/*/edit')) show
 @endif" id="pages">
 <ul class="nav nav-collapse">
-    <li class="@if(request()->path() == 'admin/page/settings') active @endif">
+    {{-- <li class="@if(request()->path() == 'admin/page/settings') active @endif">
         <a href="{{route('admin.page.settings')}}">
             <span class="sub-item">Settings</span>
         </a>
-    </li>
+    </li> --}}
     <li class="@if(request()->path() == 'admin/page/create') active @endif">
         <a href="{{route('admin.page.create') . '?language=' . $default->code}}">
             <span class="sub-item">Create Page</span>
@@ -730,11 +730,11 @@ id="course"
 @elseif(request()->path() == 'admin/events/report') show
 @endif" id="event_manage">
 <ul class="nav nav-collapse">
-    <li class="@if(request()->path() == 'admin/event/settings') active @endif">
+    {{-- <li class="@if(request()->path() == 'admin/event/settings') active @endif">
         <a href="{{route('admin.event.settings')}}">
             <span class="sub-item">Settings</span>
         </a>
-    </li>
+    </li> --}}
     <li class="@if(request()->path() == 'admin/event/categories') active @endif">
         <a href="{{route('admin.event.category.index') . '?language=' . $default->code}}">
             <span class="sub-item">Category</span>
@@ -748,7 +748,7 @@ id="course"
         <span class="sub-item">All Events</span>
     </a>
 </li>
-<li class="@if(request()->path() == 'admin/events/payment-log') active @endif">
+{{-- <li class="@if(request()->path() == 'admin/events/payment-log') active @endif">
     <a href="{{route('admin.event.payment.log') . '?language=' . $default->code}}">
         <span class="sub-item">Bookings</span>
     </a>
@@ -757,7 +757,7 @@ id="course"
     <a href="{{route('admin.event.report')}}">
         <span class="sub-item">Report</span>
     </a>
-</li>
+</li> --}}
 </ul>
 </div>
 </li>

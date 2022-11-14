@@ -527,11 +527,11 @@
                 @elseif(request()->is('admin/gallery/*/edit')) show
                 @endif" id="gallery">
                     <ul class="nav nav-collapse subnav">
-                        <li class="@if(request()->path() == 'admin/gallery/settings') active @endif">
+                        {{-- <li class="@if(request()->path() == 'admin/gallery/settings') active @endif">
                             <a href="{{route('admin.gallery.settings')}}">
                                 <span class="sub-item">Settings</span>
                             </a>
-                        </li>
+                        </li> --}}
                         @if ($data->gallery_category_status == 1)
                         <li class="@if(request()->path() == 'admin/gallery/categories') active @endif">
                             <a href="{{route('admin.gallery.categories') . '?language=' . $default->code}}">
