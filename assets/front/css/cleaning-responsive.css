@@ -109,11 +109,19 @@
     .forum-section{
         margin-top: 8.5rem;
     }
+
+    .blog-share ul li a.whatsapp-share {
+        display: block;
+      }
 }
 @media only screen and (min-width:768px) and (max-width:870px) {
     .forum-section{
         margin-top: 10.2rem;
     }
+
+    .blog-share ul li a.whatsapp-share {
+        display: block;
+      }
 }
 
 
@@ -334,12 +342,20 @@
     .forum-section{
         margin-top: 8.5rem;
     }
+
+    .blog-share ul li a.whatsapp-share {
+        display: block;
+      }
 }
 
 @media (max-width:870) {
     .forum-section{
         margin-top: 10.2em;
     }
+
+    .blog-share ul li a.whatsapp-share {
+        display: block;
+      }
 }
 
 @media (max-width:767px) {
@@ -416,12 +432,18 @@
     .forum-section{
         margin-top: 10.7rem;
     }
+    .blog-share ul li a.whatsapp-share {
+        display: block;
+      }
 }
 
 @media (max-width:435px) {
     .forum-section{
         margin-top: 12.2rem;
     }
+    .blog-share ul li a.whatsapp-share {
+        display: block;
+      }
 }
 
 @media only screen and (min-width:480px) and (max-width:767px) {
@@ -435,6 +457,9 @@
     .forum-section{
         margin-top: 10.7rem;
     }
+    .blog-share ul li a.whatsapp-share {
+        display: block;
+      }
 }
 
 
@@ -456,10 +481,16 @@
     .forum-section{
         margin-top: 12.2rem;
     }
+    .blog-share ul li a.whatsapp-share {
+        display: block;
+      }
 }
 
 @media only screen and (max-width:270px) {
     .forum-section{
         margin-top: 13.7rem;
     }
+    .blog-share ul li a.whatsapp-share {
+        display: block;
+      }
 }

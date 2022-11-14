@@ -795,6 +795,7 @@ a.readmore-btn:hover::after {
 }
 
 .blog-share ul li a.whatsapp-share {
+  display: none;
   background-color: #38aa27;
 }
 
