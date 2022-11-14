@@ -145,7 +145,7 @@
                         <p id="errcontent" class="mb-0 text-danger em"></p>
                      </div>
                      <div class="form-group">
-                        <label for="">Serial Number **</label>
+                        <label for="">Ordering Number **</label>
                         <input type="number" class="form-control ltr" name="serial_number" value="{{$service->serial_number}}" placeholder="Enter Serial Number">
                         <p id="errserial_number" class="mb-0 text-danger em"></p>
                         <p class="text-warning"><small>The higher the serial number is, the later the service will be shown everywhere.</small></p>

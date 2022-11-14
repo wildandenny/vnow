@@ -177,7 +177,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
             <p id="erranswer" class="mb-0 text-danger em"></p>
           </div>
           <div class="form-group">
-            <label for="">Serial Number **</label>
+            <label for="">Ordering Number **</label>
             <input type="number" class="form-control ltr" name="serial_number" value=""
               placeholder="Enter Serial Number">
             <p id="errserial_number" class="mb-0 text-danger em"></p>
@@ -231,7 +231,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
             <p id="eerranswer" class="mb-0 text-danger em"></p>
           </div>
           <div class="form-group">
-            <label for="">Serial Number **</label>
+            <label for="">Ordering Number **</label>
             <input id="inserial_number" type="number" class="form-control ltr" name="serial_number" value=""
               placeholder="Enter Serial Number">
             <p id="eerrserial_number" class="mb-0 text-danger em"></p>

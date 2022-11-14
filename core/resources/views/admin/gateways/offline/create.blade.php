@@ -64,7 +64,7 @@
 
                     <div class="col-lg-6">
                         <div class="form-group">
-                           <label for="">Serial Number **</label>
+                           <label for="">Ordering Number **</label>
                            <input type="number" class="form-control ltr" name="serial_number" value="" placeholder="Enter Serial Number">
                            <p id="errserial_number" class="mb-0 text-danger em"></p>
                            <p class="text-warning"><small>The higher the serial number is, the later the package will be shown everywhere.</small></p>

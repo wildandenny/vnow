@@ -225,7 +225,7 @@
                                 <p class="text-warning mb-0">This will decide the delay time to show the popup</p>
                             </div>
                             <div class="form-group">
-                                <label for="">Serial Number **</label>
+                                <label for="">Ordering Number **</label>
                                 <input type="number" class="form-control ltr" name="serial_number" value="" placeholder="Enter Serial Number">
                                 <p id="errserial_number" class="mb-0 text-danger em"></p>
                                 <ul>

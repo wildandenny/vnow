@@ -94,7 +94,7 @@
                    @endif
                 </div>
                 <div class="form-group">
-                  <label for="">Serial Number **</label>
+                  <label for="">Ordering Number **</label>
                   <input type="number" class="form-control ltr" name="serial_number" value="{{$statistic->serial_number}}" placeholder="Enter Serial Number">
                   @if ($errors->has('serial_number'))
                     <p class="mb-0 text-danger">{{$errors->first('serial_number')}}</p>

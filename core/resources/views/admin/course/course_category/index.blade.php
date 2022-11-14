@@ -289,7 +289,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
           </div>
 
           <div class="form-group">
-            <label for="">Serial Number **</label>
+            <label for="">Ordering Number **</label>
             <input
               type="number"
               class="form-control ltr"
@@ -404,7 +404,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
           </div>
 
           <div class="form-group">
-            <label for="">Serial Number **</label>
+            <label for="">Ordering Number **</label>
             <input
               id="inserial_number"
               type="number"
