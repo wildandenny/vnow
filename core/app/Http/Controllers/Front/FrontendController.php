@@ -659,7 +659,7 @@ class FrontendController extends Controller
         $data['blog'] = Blog::where('slug', $slug)->firstOrFail();
 
         $data['archives'] = Archive::orderBy('id', 'DESC')->get();
-        $data['bcats'] = Bcategory::where('status', 1)->where('language_id', $lang_id)->orderBy('serial_number', 'ASC')->get();
+        $data['bcats'] = Bcategory::where('status', 1)->where('type', 0)->where('language_id', $lang_id)->orderBy('serial_number', 'ASC')->get();
 
         $be = $currentLang->basic_extended;
         $version = $be->theme_version;
