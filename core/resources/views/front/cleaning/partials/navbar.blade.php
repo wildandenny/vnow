@@ -30,7 +30,14 @@
          <div class="top-header-social-links">
                                 <ul>
                                     @foreach ($socials as $key => $social)
-                                        <li><a href="{{$social->url}}"><i class="{{$social->icon}}"></i></a></li>
+                                    @if( $social->icon== "fab fa-tiktok")
+                                <li><a target="_blank" href="{{$social->url}}"><svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.24,6V8.82a6.79,6.79,0,0,1-4-1.28v5.81A5.26,5.26,0,1,1,8,8.1a4.36,4.36,0,0,1,.72.05v2.9A2.57,2.57,0,0,0,7.64,11a2.4,2.4,0,1,0,2.77,2.38V2h2.86a4,4,0,0,0,1.84,3.38A4,4,0,0,0,17.24,6Z" style="
+                                    fill: white;
+                                "></path></svg></a></li>
+                            @else
+                                <li><a href="{{$social->url}}"><i class="{{$social->icon}}"></i></a></li>
+                            @endif
+                                        
                                     @endforeach
                                 </ul>
                             </div>
