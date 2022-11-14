@@ -1005,7 +1005,7 @@ id="course"
 @endif">
 <a data-toggle="collapse" href="#usersManagement">
     <i class="la flaticon-users"></i>
-    <p>Users Management</p>
+    <p>Subscriber Management</p>
     <span class="caret"></span>
 </a>
 <div class="collapse
