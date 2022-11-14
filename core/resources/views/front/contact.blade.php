@@ -27,11 +27,12 @@
                                 $addresses = explode(PHP_EOL, $bex->contact_addresses);
                             @endphp
                             @foreach ($addresses as $index => $address)
-                            @if($index == 0)
+                            <p>{{$address}}</p>
+                            {{-- @if($index == 0)
                             <p><i class="fas fa-map-pin base-color mr-1"></i> {{$address}}</p>
                             @else
                             <p>{{$address}}</p>
-                            @endif
+                            @endif --}}
                             @endforeach
                           
                         </div>

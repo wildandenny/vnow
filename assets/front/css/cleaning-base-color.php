@@ -380,6 +380,7 @@ border: 1px solid <?php echo $color1; ?>;
 color: #ffff;
 }
 .scroll-to-top {
+  box-shadow: 1px 0px 10px #ffffff8c;
 background: <?php echo $color1; ?>;
 }
 
