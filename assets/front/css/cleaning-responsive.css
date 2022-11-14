@@ -144,7 +144,7 @@
     }
     .mean-container .mean-nav {
         margin-top: 10px;
-        max-height: 400px;
+        /* max-height: 400px; */
         /* overflow: scroll; */
     }
     .mean-container a.meanmenu-reveal {
