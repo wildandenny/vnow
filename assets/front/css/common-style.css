@@ -794,6 +794,10 @@ a.readmore-btn:hover::after {
   opacity: 0.8;
 }
 
+.blog-share ul li a.whatsapp-share {
+  background-color: #38aa27;
+}
+
 .blog-share ul li a.facebook-share {
   background-color: #275baa;
 }
