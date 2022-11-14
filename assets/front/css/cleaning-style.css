@@ -1276,7 +1276,8 @@ span.count {
 }
 
 .testimonial-author-img img {
-    width: 100% !important
+    width: 100% !important;
+    
 }
 
 .testimonial-author-details {
