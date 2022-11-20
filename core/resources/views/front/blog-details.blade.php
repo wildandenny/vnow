@@ -7,8 +7,8 @@
 @section('meta-keywords', "$blog->meta_keywords")
 @section('meta-description', "$blog->meta_description")
 
-@section('breadcrumb-title', "Detil Blog")
-@section('breadcrumb-subtitle', strlen($blog->title) > 30 ? mb_substr($blog->title, 0, 30, 'utf-8') . '...' : $blog->title)
+@section('breadcrumb-title', "Selengkapnya…")
+@section('breadcrumb-subtitle', $blog->title)
 @section('breadcrumb-link', __('Blog Details'))
 
 @section('content')

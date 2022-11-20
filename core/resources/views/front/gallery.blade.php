@@ -8,7 +8,7 @@
 @section('meta-description', "$be->gallery_meta_description")
 
 @section('breadcrumb-title', "Galeri")
-@section('breadcrumb-subtitle', "Galeri Kami")
+@section('breadcrumb-subtitle', "Dokumentasi KegiatanKegiatan Youth Voice Now")
 @section('breadcrumb-link', __('GALLERY'))
 
 @section('content')

@@ -82,9 +82,9 @@
                                         $images = json_decode($event->image, true);
                                     @endphp
                                     <img data-src="{{(!empty($images)) ? asset('/assets/front/img/events/sliders/'.$images[0]) : ''}}" class="img-fluid lazy" alt="">
-                                    <div class="event-overlay">
+                                    {{-- <div class="event-overlay">
                                         <a href="{{route('front.event_details',[$event->slug])}}" class="main-btn">{{__('BUY TICKET')}}</a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="event-content">
                                     <a class="cat c-1 base-bg text-white">{{$event->eventCategories->name}}</a>
@@ -92,7 +92,8 @@
                                         {{$bex->base_currency_symbol_position == 'left' ? $bex->base_currency_symbol : ''}}{{$event->cost}}{{$bex->base_currency_symbol_position == 'right' ? $bex->base_currency_symbol : ''}}
                                     </a> --}}
                                     <h3><a href="{{route('front.event_details',[$event->slug])}}">
-                                        {{strlen($event->title) > 30 ? mb_substr($event->title,0,30,'utf-8') . '...' : $event->title}}
+                                        {{$event->title}}
+                                        {{-- {{strlen($event->title) > 30 ? mb_substr($event->title,0,30,'utf-8') . '...' : $event->title}} --}}
                                     </a></h3>
                                     <div class="event-meta">
                                         <span>{{$event->organizer}}</span>
