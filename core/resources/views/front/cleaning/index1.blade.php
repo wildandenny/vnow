@@ -289,7 +289,7 @@
                         <img data-src="{{asset('assets/front/img/members/'.$member->image)}}" class="lazy" alt="">
                         <div class="single-team-content">
                             <div class="single-team-member-details">
-                                <h4>{{convertUtf8($member->name)}}</h4>
+                                <h4>{{convertUtf8($member->name)}}  </h4>
                                 <p>{{convertUtf8($member->rank)}}</p>
                             </div>
                             <ul class="team-social-links">

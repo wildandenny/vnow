@@ -198,7 +198,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-wedget">
-                        <h4>{{__('Newsletter')}}</h4>
+                        <h4 style="margin-bottom: 10px;">{{__('Newsletter')}}</h4>
                         <p>Berlangganan Buletin Voice Now dan Info Terbaru Tentang Voice Now</p>
                         <form id="footerSubscribeForm" action="{{route('front.subscribe')}}" method="post">
                             <input type="email" name="email" required placeholder="{{__('Enter Email Address')}}">

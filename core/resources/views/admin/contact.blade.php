@@ -62,9 +62,12 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
             <div class="row">
               <div class="col-lg-6 offset-lg-3">
                 @csrf
-                <div class="form-group">
+                <input type="hidden" class="form-control" name="contact_form_title" value="{{$abs->contact_form_title}}" placeholder="Enter Titlte">
+                <input type="hidden" class="form-control" name="contact_form_subtitle" value="{{$abs->contact_form_subtitle}}" placeholder="Enter Subtitlte">
+
+                {{-- <div class="form-group">
                   <label>Form Title **</label>
-                  <input class="form-control" name="contact_form_title" value="{{$abs->contact_form_title}}" placeholder="Enter Titlte">
+                  <input type="hidden" class="form-control" name="contact_form_title" value="{{$abs->contact_form_title}}" placeholder="Enter Titlte">
                   @if ($errors->has('contact_form_title'))
                     <p class="mb-0 text-danger">{{$errors->first('contact_form_title')}}</p>
                   @endif
@@ -75,7 +78,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
                   @if ($errors->has('contact_form_subtitle'))
                     <p class="mb-0 text-danger">{{$errors->first('contact_form_subtitle')}}</p>
                   @endif
-                </div>
+                </div> --}}
 
                 <div class="form-group">
                   <label>Address **</label>

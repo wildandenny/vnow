@@ -979,8 +979,18 @@ if (!function_exists('teamSection')) {
                     $teamSec .= "<li><a href='" . $member->instagram . "' target='_blank'><i class='fab fa-instagram'></i></a></li>";
                 }
                 $teamSec .= "</ul>
-                                </div>
-                            </div>";
+                                </div>";
+                $teamSec .= '<div class="single-team-member-details" style="
+                margin-top: 12px;">
+                <p style="
+                font-size: 16px;
+                text-align: justify;
+                line-height: 1.7em;">';
+                $teamSec .= $member->description;
+                $teamSec .= ' </p></div>';
+                $teamSec .= "</div>";
+              
+               
             }
             $teamSec .= "</div>";
         }

@@ -14,7 +14,7 @@
 @section('meta-description', "$be->blogs_meta_description")
 
 @section('breadcrumb-title', "Aktivitas Kami")
-@section('breadcrumb-subtitle', "Seminar")
+@section('breadcrumb-subtitle', "Seminar dan Diskusi")
 @section('breadcrumb-link', "Seminar")
 
 @section('content')

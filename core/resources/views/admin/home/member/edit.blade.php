@@ -101,6 +101,11 @@
                   <p id="errrank" class="mb-0 text-danger em"></p>
                 </div>
                 <div class="form-group">
+                  <label for="">Description **</label>
+                  <textarea type="text" class="form-control" name="description" value="{{$member->description}}" placeholder="Description">{{$member->description}}</textarea>
+                  <p id="errdesc" class="mb-0 text-danger em"></p>
+                </div>
+                <div class="form-group">
                   <label for="">Facebook</label>
                   <input type="text" class="form-control ltr" name="facebook" value="{{$member->facebook}}" placeholder="Enter facebook url">
                   <p id="errfacebook" class="mb-0 text-danger em"></p>

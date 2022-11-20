@@ -269,6 +269,12 @@ id="errcategory"
 class="mb-0 text-danger em"
 ></p>
 </div>
+{{-- <div class="form-group">
+    <label for="">Date</label>
+    <input type="date" class="form-control ltr" name="created_at"  placeholder="Enter Date">
+    <p id="errdate" class="mb-0 text-danger em"></p>
+</div> --}}
+
 <div class="form-group">
     <label for="">Content **</label>
     <textarea id="blogContent"

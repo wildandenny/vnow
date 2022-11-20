@@ -11,7 +11,7 @@
                                 <h1 style="font-size: 2em; color: #{{$be->hero_section_bold_text_color}};">{{$bs->hero_section_bold_text}}</h1>
                                 {{-- <h1 style="font-size: {{$be->hero_section_bold_text_font_size}}px; color: #{{$be->hero_section_bold_text_color}};">{{$bs->hero_section_bold_text}}</h1> --}}
                                 @if (!empty($bs->hero_section_button_url) && !empty($bs->hero_section_button_text))
-                                    <a href="{{$bs->hero_section_button_url}}" class="main-btn hero-btn" style="font-size: {{$be->hero_section_button_text_font_size}}px;">{{convertUtf8($bs->hero_section_button_text)}}</a>
+                                    <a href="{{$bs->hero_section_button_url}}" class="main-btn hero-btn" style="font-size: {{$be->hero_section_button_text_font_size}}px;font-weight: 700;">{{convertUtf8($bs->hero_section_button_text)}}</a>
                                 @endif
                             </div>
                         </div>

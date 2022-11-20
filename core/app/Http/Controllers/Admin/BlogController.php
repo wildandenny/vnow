@@ -89,6 +89,9 @@ class BlogController extends Controller
         $blog->meta_keywords = $request->meta_keywords;
         $blog->meta_description = $request->meta_description;
         $blog->serial_number = $request->serial_number;
+        if($request->created_at != ''){
+            $blog->created_at = $request->created_at;
+        }
 
         if ($request->filled('image')) {
             $filename = uniqid() .'.'. $extImage;
@@ -154,6 +157,7 @@ class BlogController extends Controller
         $blog->meta_keywords = $request->meta_keywords;
         $blog->meta_description = $request->meta_description;
         $blog->serial_number = $request->serial_number;
+        $blog->created_at = $request->created_at;
 
         if ($request->filled('image')) {
             @unlink('assets/front/img/blogs/' . $blog->main_image);

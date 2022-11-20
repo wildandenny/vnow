@@ -105,6 +105,11 @@
                   <p id="errcategory" class="mb-0 text-danger em"></p>
                 </div>
                 <div class="form-group">
+                  <label for="">Date</label>
+                  <input type="date" class="form-control ltr" name="created_at" value="{{date("Y-m-d" , strtotime($blog->created_at))}}" placeholder="Enter Date">
+                  <p id="errdate" class="mb-0 text-danger em"></p>
+              </div>
+                <div class="form-group">
                   <label for="">Content **</label>
                   <textarea id="blogContent" class="form-control summernote" name="content" data-height="300" placeholder="Enter content">{{replaceBaseUrl($blog->content)}}</textarea>
                   <p id="errcontent" class="mb-0 text-danger em"></p>

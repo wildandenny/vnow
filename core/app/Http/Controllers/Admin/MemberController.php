@@ -49,6 +49,7 @@ class MemberController extends Controller
             'image' => 'required',
             'name' => 'required|max:50',
             'rank' => 'required|max:50',
+            'description' => 'required',
             'facebook' => 'nullable|max:50',
             'twitter' => 'nullable|max:50',
             'linkedin' => 'nullable|max:50',
@@ -75,6 +76,7 @@ class MemberController extends Controller
         $member->image = $request->member_image;
         $member->name = $request->name;
         $member->rank = $request->rank;
+        $member->description = $request->description;
         $member->facebook = $request->facebook;
         $member->twitter = $request->twitter;
         $member->linkedin = $request->linkedin;
@@ -101,6 +103,7 @@ class MemberController extends Controller
         $rules = [
             'name' => 'required|max:50',
             'rank' => 'required|max:50',
+            'description' => 'required',
             'facebook' => 'nullable|max:50',
             'twitter' => 'nullable|max:50',
             'linkedin' => 'nullable|max:50',
@@ -126,6 +129,7 @@ class MemberController extends Controller
         $member = Member::findOrFail($request->member_id);
         $member->name = $request->name;
         $member->rank = $request->rank;
+        $member->description = $request->description;
         $member->facebook = $request->facebook;
         $member->twitter = $request->twitter;
         $member->linkedin = $request->linkedin;

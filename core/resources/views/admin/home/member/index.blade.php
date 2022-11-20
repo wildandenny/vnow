@@ -156,7 +156,6 @@
                                         <th scope="col">Image</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Rank</th>
-                                        <th scope="col">Featured</th>
                                         <th scope="col">Actions</th>
                                     </tr>
                                 </thead>
@@ -167,7 +166,7 @@
                                         <td><img src="{{asset('assets/front/img/members/'.$member->image)}}" alt="" width="40"></td>
                                         <td>{{convertUtf8($member->name)}}</td>
                                         <td>{{$member->rank}}</td>
-                                        <td>
+                                        {{-- <td>
                                             <form id="featureForm{{$member->id}}" class="d-inline-block" action="{{route('admin.member.feature')}}" method="post">
                                                 @csrf
                                                 <input type="hidden" name="member_id" value="{{$member->id}}">
@@ -176,7 +175,7 @@
                                                     <option value="0" {{$member->feature == 0 ? 'selected' : ''}}>No</option>
                                                 </select>
                                             </form>
-                                        </td>
+                                        </td> --}}
                                         <td>
                                             <a class="btn btn-secondary btn-sm" href="{{route('admin.member.edit', $member->id) . '?language=' . request()->input('language')}}">
                                                 <span class="btn-label">

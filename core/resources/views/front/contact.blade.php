@@ -7,8 +7,9 @@
 @section('meta-keywords', "$be->contact_meta_keywords")
 @section('meta-description', "$be->contact_meta_description")
 
+
 @section('breadcrumb-title', "Hubungi Kami")
-@section('breadcrumb-subtitle', "Butuh bantuan Kami? hubungi Kami dibawah ini")
+@section('breadcrumb-subtitle', "Butuh bantuan Kami? Kamu dapat menghubungi kontak-kontak dibawah ini yaa")
 @section('breadcrumb-link', "Hubungi Kami")
 
 @section('content')
@@ -57,6 +58,10 @@
                             @foreach ($mails as $mail)
                             <p>{{$mail}}</p>
                             @endforeach
+                            <p style="margin-top: 10px;">Teman-Teman dapat mengirimkan
+                                pesan (DM/Chat) di media social
+                                voice now untuk mendapat informasi
+                                lebih lanjut</p>
                         </div>
                     </div>
                 </div>

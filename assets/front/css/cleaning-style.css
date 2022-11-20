@@ -759,6 +759,7 @@ li.submenus::after {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 20px;
 }
 
 .single-carousel-active.hero-bg-2 .hero-content h1 {
@@ -1284,7 +1285,7 @@ span.count {
     margin-left: 220px;
     border: 1px solid #e4e8ec;
     padding: 35px 27px;
-    height: 208px;
+    /* height: 208px; */
     border-radius: 5px
 }
 
