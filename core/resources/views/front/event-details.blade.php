@@ -49,7 +49,7 @@
 @section('meta-description', "$event->meta_description")
 
 @section('breadcrumb-title', "Detil Event")
-@section('breadcrumb-subtitle', strlen($event->title) > 30 ? mb_substr($event->title,0,30,'utf-8') . '...' : $event->title)
+@section('breadcrumb-subtitle', ($event->title))
 @section('breadcrumb-link', __('Event Details'))
 
 @section('content')

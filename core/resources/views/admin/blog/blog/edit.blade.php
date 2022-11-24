@@ -99,7 +99,11 @@
                   <select class="form-control" name="category">
                     <option value="" selected disabled>Select a category</option>
                     @foreach ($bcats as $key => $bcat)
-                      <option value="{{$bcat->id}}" {{$bcat->id == $blog->bcategory->id ? 'selected' : ''}}>{{$bcat->name}}</option>
+                      @if($bcat->type == 1)
+                      <option value="{{$bcat->id}}" {{$bcat->id == $blog->bcategory->id ? 'selected' : ''}}>Activity - {{$bcat->name}}</option>
+                      @else
+                      <option value="{{$bcat->id}}" {{$bcat->id == $blog->bcategory->id ? 'selected' : ''}}>Blogs - {{$bcat->name}}</option>
+                      @endif
                     @endforeach
                   </select>
                   <p id="errcategory" class="mb-0 text-danger em"></p>
@@ -108,7 +112,17 @@
                   <label for="">Date</label>
                   <input type="date" class="form-control ltr" name="created_at" value="{{date("Y-m-d" , strtotime($blog->created_at))}}" placeholder="Enter Date">
                   <p id="errdate" class="mb-0 text-danger em"></p>
-              </div>
+                </div>
+                <div class="form-group">
+                  <label for="">Article Source </label>
+                  <input type="text" class="form-control ltr" name="media_source" value="{{$blog->media_source}}" placeholder="Article Source Example : mediaindonesia.com">
+                  <p id="errarticlesource" class="mb-0 text-danger em"></p>
+                </div>
+                <div class="form-group">
+                  <label for="">URL Article Source </label>
+                  <input type="text" class="form-control ltr" name="url_source" value="{{$blog->url_source}}" placeholder="URL Article Source Example : https://m.mediaindonesia.com/childfund-latih-pemetaan-analisis-sosial-bagi-anak-anak-di-ntt">
+                  <p id="errarticlesource" class="mb-0 text-danger em"></p>
+                </div>
                 <div class="form-group">
                   <label for="">Content **</label>
                   <textarea id="blogContent" class="form-control summernote" name="content" data-height="300" placeholder="Enter content">{{replaceBaseUrl($blog->content)}}</textarea>

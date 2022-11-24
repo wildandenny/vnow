@@ -269,11 +269,21 @@ id="errcategory"
 class="mb-0 text-danger em"
 ></p>
 </div>
-{{-- <div class="form-group">
+<div class="form-group">
     <label for="">Date</label>
-    <input type="date" class="form-control ltr" name="created_at"  placeholder="Enter Date">
+    <input type="date" class="form-control ltr" value="{{date("Y-m-d")}}" name="created_at"  placeholder="Enter Date">
     <p id="errdate" class="mb-0 text-danger em"></p>
-</div> --}}
+</div>
+<div class="form-group">
+<label for="">Article Source </label>
+<input type="text" class="form-control ltr" name="media_source" value="{{$blog->media_source}}" placeholder="Article Source Example : mediaindonesia.com">
+<p id="errarticlesource" class="mb-0 text-danger em"></p>
+</div>
+<div class="form-group">
+<label for="">URL Article Source </label>
+<input type="text" class="form-control ltr" name="url_source" value="{{$blog->url_source}}" placeholder="URL Article Source Example : https://m.mediaindonesia.com/childfund-latih-pemetaan-analisis-sosial-bagi-anak-anak-di-ntt">
+<p id="errarticlesource" class="mb-0 text-danger em"></p>
+</div>
 
 <div class="form-group">
     <label for="">Content **</label>
@@ -367,7 +377,11 @@ class="mb-0 text-danger em"
                 console.log(data);
                 let options = `<option value="" disabled selected>Select a category</option>`;
                 for (let i = 0; i < data.length; i++) {
-                    options += `<option value="${data[i].id}">${data[i].name}</option>`;
+                    if(data[i].type == 1){
+                        options += `<option value="${data[i].id}">Activity - ${data[i].name}</option>`;
+                    }else{
+                        options += `<option value="${data[i].id}">Blogs -  ${data[i].name}</option>`;
+                    }
                 }
                 $("#bcategory").html(options);
 

@@ -20,8 +20,15 @@
            <div class="{{$blog->sidebar == 1 ? 'col-lg-7' : 'col-12'}}">
               <div class="blog-details">
                  <img class="blog-details-img-1 lazy" data-src="{{asset('assets/front/img/blogs/'.$blog->main_image)}}" alt="">
-                 <small class="date">{{date('F d, Y', strtotime($blog->created_at))}}  -  {{__('BY')}} {{__('Admin')}}</small>
+                 <small class="date">{{date('F d, Y', strtotime($blog->created_at))}}  -  ditulis oleh {{__('Admin')}}</small>
                  <h2 class="blog-details-title">{{convertUtf8($blog->title)}}</h2>
+                 @if(!empty($blog->media_source) || !empty($blog->url_source) )
+                 <p style="margin-top: -20px;margin-bottom: 20px;">Artikel asli diterbitkan
+                     pertama kali oleh {{$blog->media_source}}, link berita dapat di
+                     akses <a href="{{$blog->url_source}}" target="_blank">disini</a>
+                 </p>
+                 <p></p>
+                 @endif
                  <div class="blog-details-body">
                    {!! replaceBaseUrl(convertUtf8($blog->content)) !!}
                  </div>

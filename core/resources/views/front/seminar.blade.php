@@ -69,7 +69,7 @@
                             @endphp
                              <p class="date"><small>{{__('By')}} <span class="username">{{__('Admin')}}</span></small> | <small>{{$blogDate}}</small> </p>
 
-                             <h4 class="blog-title"><a href="{{route('front.seminardetails', [$blog->slug])}}">{{strlen($blog->title) > 40 ? mb_substr($blog->title, 0, 40, 'utf-8') . '...' : $blog->title}}</a></h4>
+                             <h4 class="blog-title"><a href="{{route('front.seminardetails', [$blog->slug])}}">{{$blog->title}}</a></h4>
 
                              <p class="blog-summary">{!! strlen(strip_tags($blog->content)) > 100 ? mb_substr(strip_tags($blog->content), 0, 100, 'utf-8') . '...' : strip_tags($blog->content) !!}</p>
 

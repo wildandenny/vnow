@@ -92,6 +92,8 @@ class BlogController extends Controller
         if($request->created_at != ''){
             $blog->created_at = $request->created_at;
         }
+        $blog->media_source = $request->media_source;
+        $blog->url_source = $request->url_source;
 
         if ($request->filled('image')) {
             $filename = uniqid() .'.'. $extImage;
@@ -157,6 +159,8 @@ class BlogController extends Controller
         $blog->meta_keywords = $request->meta_keywords;
         $blog->meta_description = $request->meta_description;
         $blog->serial_number = $request->serial_number;
+        $blog->media_source = $request->media_source;
+        $blog->url_source = $request->url_source;
         $blog->created_at = $request->created_at;
 
         if ($request->filled('image')) {

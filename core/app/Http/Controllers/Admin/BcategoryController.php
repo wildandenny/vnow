@@ -17,7 +17,7 @@ class BcategoryController extends Controller
         $lang = Language::where('code', $request->language)->first();
 
         $lang_id = $lang->id;
-        $data['bcategorys'] = Bcategory::where('language_id', $lang_id)->orderBy('id', 'DESC')->paginate(10);
+        $data['bcategorys'] = Bcategory::where('type', 0)->where('language_id', $lang_id)->orderBy('id', 'DESC')->paginate(10);
 
         $data['lang_id'] = $lang_id;
 
