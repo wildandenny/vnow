@@ -419,7 +419,8 @@
         margin: 0 auto
     }
     .testimonial-author-img img {
-        /* height: 230px; */
+        height: 230px;
+        width: auto !important;
         margin: 0 auto
     }
     .single-team-item img {
@@ -484,6 +485,10 @@
     .blog-share ul li a.whatsapp-share {
         display: block;
       }
+
+    .single-carousel-active{
+    background-position: center; 
+    }
 }
 
 @media only screen and (max-width:270px) {
@@ -492,5 +497,9 @@
     }
     .blog-share ul li a.whatsapp-share {
         display: block;
+    }
+
+    .single-carousel-active{
+        background-position: center; 
       }
 }

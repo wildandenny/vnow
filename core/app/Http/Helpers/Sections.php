@@ -956,7 +956,7 @@ if (!function_exists('teamSection')) {
             }
             $teamSec .= "</div>";
         } elseif ($version == 'cleaning') {
-            $teamSec .= "<div class='team-carousel-active team-slick'>";
+            $teamSec .= "<div class='testimonial-active'>";
             foreach ($members as $key => $member) {
                 $teamSec .= "<div class='single-team-item'>
                                 <img class='lazy' data-src='" . url('assets/front/img/members/' . $member->image) . "' alt=''>
@@ -981,7 +981,7 @@ if (!function_exists('teamSection')) {
                 $teamSec .= "</ul>
                                 </div>";
                 $teamSec .= '<div class="single-team-member-details" style="
-                margin-top: 12px;">
+                margin-top: 12px;margin-bottom:20px;">
                 <p style="
                 font-size: 16px;
                 text-align: justify;

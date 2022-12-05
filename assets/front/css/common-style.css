@@ -7055,6 +7055,7 @@ service-category-section {
 }
 
 .pagebuilder-content .slick-slide {
+  margin-bottom:20px;
   height: auto;
 }
 
@@ -8428,4 +8429,7 @@ div#particles-js canvas {
 .pricing-page .single-pricing-table {
     margin-bottom: 40px;
 }
+
+
+
 /* END: Pricing Section CSS */
