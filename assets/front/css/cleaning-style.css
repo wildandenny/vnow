@@ -1301,7 +1301,7 @@ span.count {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 0
+    /* bottom: 0 */
 }
 
 .testimonial-active .slick-dots li {
