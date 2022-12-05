@@ -12,24 +12,21 @@ if (!empty($admin->role)) {
 </div>
 <div class="row">
     
-
-
-    @if (empty($admin->role) || (!empty($permissions) && in_array('Course Management', $permissions)))
-    @if ($bex->is_course == 1)
+    @if (empty($admin->role) || (!empty($permissions) && in_array('Content Management', $permissions)))
     <div class="col-sm-6 col-md-3">
-        <a href="{{route('admin.course.index', ['language' => $default->code])}}" class="d-block">
-            <div class="card card-stats card-success card-round">
-                <div class="card-body">
+        <a href="{{route('admin.blog.index', ['language' => $default->code])}}" class="d-block">
+            <div class="card card-stats card-primary card-round">
+                <div class="card-body ">
                     <div class="row">
                         <div class="col-3">
                             <div class="icon-big text-center">
-                                <i class="fas fa-video"></i>
+                                <i class="fab fa-blogger-b"></i>
                             </div>
                         </div>
-                        <div class="col-9 col-stats">
+                        <div class="col-9 col-stats pl-1">
                             <div class="numbers">
-                                <p class="card-category">Courses</p>
-                                <h4 class="card-title">{{$default->courses()->count()}}</h4>
+                                <p class="card-category">Blogs</p>
+                                <h4 class="card-title">{{$default->blogs()->count()}}</h4>
                             </div>
                         </div>
                     </div>
@@ -37,29 +34,11 @@ if (!empty($admin->role)) {
             </div>
         </a>
     </div>
-    <div class="col-sm-6 col-md-3">
-        <a href="{{route('admin.course.purchaseLog')}}" class="d-block">
-            <div class="card card-stats card-dark card-round">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="icon-big text-center">
-                                <i class="fas fa-user-graduate"></i>
-                            </div>
-                        </div>
-                        <div class="col-9 col-stats">
-                            <div class="numbers">
-                                <p class="card-category">Course Enrolls</p>
-                                <h4 class="card-title">{{\App\CoursePurchase::count()}}</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
+   
     @endif
-    @endif
+
+
+    
 
 
     @if (empty($admin->role) || (!empty($permissions) && in_array('Events Management', $permissions)))
@@ -78,27 +57,6 @@ if (!empty($admin->role)) {
                             <div class="numbers">
                                 <p class="card-category">Events</p>
                                 <h4 class="card-title">{{$default->events()->count()}}</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <a href="{{route('admin.event.payment.log')}}" class="d-block">
-            <div class="card card-stats card-primary card-round">
-                <div class="card-body ">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="icon-big text-center">
-                                <i class="far fa-calendar-check"></i>
-                            </div>
-                        </div>
-                        <div class="col-9 col-stats">
-                            <div class="numbers">
-                                <p class="card-category">Event Bookings</p>
-                                <h4 class="card-title">{{\App\EventDetail::count()}}</h4>
                             </div>
                         </div>
                     </div>
@@ -160,55 +118,9 @@ if (!empty($admin->role)) {
     </div>
     @endif
 
-    @if (empty($admin->role) || (!empty($permissions) && in_array('Content Management', $permissions)))
-    <div class="col-sm-6 col-md-3">
-        <a href="{{route('admin.blog.index', ['language' => $default->code])}}" class="d-block">
-            <div class="card card-stats card-dark card-round">
-                <div class="card-body ">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="icon-big text-center">
-                                <i class="fab fa-blogger-b"></i>
-                            </div>
-                        </div>
-                        <div class="col-9 col-stats pl-1">
-                            <div class="numbers">
-                                <p class="card-category">Blogs</p>
-                                <h4 class="card-title">{{$default->blogs()->count()}}</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
    
-    @endif
 
-
-    @if (empty($admin->role) || (!empty($permissions) && in_array('RSS Feeds', $permissions)))
-    <div class="col-sm-6 col-md-3">
-        <a href="{{route('admin.rss.feed', ['language' => $default->code])}}" class="d-block">
-            <div class="card card-stats card-warning card-round">
-                <div class="card-body ">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="icon-big text-center">
-                                <i class="fas fa-rss"></i>
-                            </div>
-                        </div>
-                        <div class="col-9 col-stats pl-1">
-                            <div class="numbers">
-                                <p class="card-category">RSS Feeds</p>
-                                <h4 class="card-title">{{$default->feed()->count()}}</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
-    @endif
+   
 
     
 </div>
